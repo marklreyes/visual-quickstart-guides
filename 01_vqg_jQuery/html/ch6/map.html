@@ -1,0 +1,43 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Ch6: Mapping an Array | jQuery Visual Start Guide</title>
+<!-- <script type="text/javascript" src="../js/jquery-1.4.2.js"></script> -->
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"> </script>
+<script type="text/javascript">
+      $(document).ready(function(){
+    
+        var array = [1, 2, 3, 4, 5];
+        $("#div1").text("Original: " + array.join(", "));
+
+    array = $.map(array, function (i) { 
+      return i + i; 
+    });
+
+        $("#div2").text("Doubled: " + array.join(", "));
+
+      });
+</script>
+<style type="text/css">
+</style>
+</head>
+<body>
+	<h1>Mapping an array</h1>
+		<div id="div1"></div>
+		<div id="div2"></div>
+</body>
+</html>
+<!-- 
+$.map() function, is a powerful array utility function that lets you save the steps of writing loops, 
+which lets you work with the individual elements in an array, modifying those elements and returning the new arrray.
+
+Mapping an array lets you translate every array element into something new.
+
+EX: Create a new array in which all elements are exactly double the value of the elements in the original array
+
+	array = $.map(array, function(n, i)
+		{
+			return (i + i);
+		});
+-->

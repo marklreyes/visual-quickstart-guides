@@ -1,0 +1,40 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Ch2: Examining Elements That the User Selected | jQuery Visual Start Guide</title>
+<!-- <script type="text/javascript" src="../js/jquery-1.4.2.js"></script> -->
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"> </script>
+<script type="text/javascript">
+function count(){
+	alert("You selected " + $("select option:selected").length + " items.");
+	}
+</script>
+<style type="text/css">
+</style>
+</head>
+<body>
+<h1>Counting selected items</h1>
+<form>
+  <select size="4" multiple="true">
+    <option>Item 1</option>
+    <option>Item 2</option>
+    <option>Item 3</option>
+    <option>Item 4</option>
+  </select>
+  <br />
+  <input type="button" value="Count" onclick="count()" />
+</form>
+</body>
+</html>
+<!-- 
+jQuery lets you select elements that have been selected by the user
+
+you might have a list box (<select> control) in which the user has selected several items
+match those selected items with the selected selector:
+	$("select option:selected")
+    
+this puts the selector to work by counting the number of items the user has selected in a list box
+
+
+-->

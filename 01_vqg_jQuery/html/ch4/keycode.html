@@ -1,0 +1,35 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Ch4: Capturing Keystrokes | jQuery Visual Start Guide</title>
+<!-- <script type="text/javascript" src="../js/jquery-1.4.2.js"></script> -->
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"> </script>
+<script type="text/javascript">
+	$(function(){
+		$('#target').bind('keyup', typer);
+	});
+
+	function typer(event) {
+		$('#p1').text('Character: ' + String.fromCharCode(event.keyCode));
+	}
+	
+</script>
+<style type="text/css">
+</style>
+</head>
+<body id="target">
+<h1>Capturing key events</h1>
+<p id="p1"></p>
+</body>
+</html>
+<!-- 
+You can capture keystrokes with jQuery.
+
+With keyDown, keyPress, and keyUp events, the event object's keyCode property holds the struck key's code. 
+
+EX: To convert from the raw key code to the character that was struck, use the js method,
+	String.fromCharCode() (which returns capital letters)
+
+	Type keys, and teh code will display the struck key in a p tag
+-->

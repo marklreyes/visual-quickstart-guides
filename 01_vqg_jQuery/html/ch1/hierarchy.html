@@ -1,0 +1,40 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Ch1: Specifiying Elements in a Hierarchy | jQuery Visual Start Guide</title>
+<!-- <script type="text/javascript" src="../js/jquery-1.4.2.js"></script> -->
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"> </script>
+<script type="text/javascript">
+function toggle(){
+	$('body div p').toggleClass('striped');
+	}
+</script>
+<style>
+p.striped {
+	background-color: cyan;
+	}
+</style>
+</head>
+<body>
+<h1>Selecting elements in a hierarchy</h1>
+<div>
+<p>This is paragraph 1.</p>
+<p>This is paragraph 2.</p>
+<p>This is paragraph 3.</p>
+<p>This is paragraph 4.</p>
+</div>
+<p>This is paragraph 5.</p>
+<form>
+  <input type="button" value="Toggle Class" onclick="toggle()" />
+</form>
+</body>
+</html>
+<!-- 
+ask jQuery to select only p elements that appear inside of a div element, which itself appears in a body element:
+	$('body div p')
+
+let's you make the selection you want, and also lets you change the style class of the selected elements when you click a button:
+	$('body div p').toggleClass('striped');
+
+-->

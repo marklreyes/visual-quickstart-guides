@@ -1,0 +1,37 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Ch4: Unbinding Event Handlers | jQuery Visual Start Guide</title>
+<!-- <script type="text/javascript" src="../js/jquery-1.4.2.js"></script> -->
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"> </script>
+
+<script type="text/javascript">
+$(function(){
+	$('#target').bind('click', clicker);
+});
+
+function clicker(event){
+	alert('Click event unbound');
+		$('#target').unbind('click', clicker);
+	}
+</script>
+</head>
+<body> 
+<h1>Unbinding event handlers</h1>
+<h1>Click the flower...</h1>
+<img id="target" src="../../images/image1.jpg" alt="flower" />
+</body>
+</html>
+<!-- 
+You can disconnect events from event handlers using jQeuery.
+
+EX: If an option is no longer available in your application, you may want to remove the click event handler that responds to events.
+
+Disconnect events from event handlers using the unbind() function:
+	.unbind('click',function(event) {...
+	
+Pass the unbind() function the name of the even you're disconnecting and event handler to which the event is currently tied.
+
+Example above is disconnecting a click event from an image when the image is clicked.
+-->

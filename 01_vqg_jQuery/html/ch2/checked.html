@@ -1,0 +1,33 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Ch2: Examining Checked Boxes and Radio Buttons | jQuery Visual Start Guide</title>
+<!-- <script type="text/javascript" src="../js/jquery-1.4.2.js"></script> -->
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"> </script>
+<script type="text/javascript">
+function count(){
+	alert("You checked " + $("input:checked").length + " items.");
+	}
+</script>
+<style type="text/css">
+</style>
+</head>
+<body>
+<h1>Counting checked boxes</h1>
+<form>
+	<input type="checkbox"/>Check 1
+	<input type="checkbox"/>Check 2
+	<input type="checkbox"/>Check 3
+	<input type="checkbox"/>Check 4
+    <br />
+    <input type="button" value="Count" onclick="count()"/>
+</form>
+</body>
+</html>
+<!-- 
+one of the most powerful selectors is: checked
+
+put check to work by counting the number of check boxes the user has checked
+
+-->

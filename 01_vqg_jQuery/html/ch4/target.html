@@ -1,0 +1,39 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Ch4: Getting Event Targets | jQuery Visual Start Guide</title>
+<!-- <script type="text/javascript" src="../js/jquery-1.4.2.js"></script> -->
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"> </script>
+<script type="text/javascript">
+	$(function() {
+		$('#figure1').bind('click', clicker);
+	});
+	
+	function clicker(event) {
+		$('#p1').text("ID of target element: " + event.target.id);
+	}
+</script>
+<style type="text/css">
+</style>
+</head>
+<body>
+<h1>Getting event target</h1>
+<h1>Click the flower...</h1>
+<img id="figure1" src="../../images/image1.jpg" />
+<p id="p1"></p>
+</body>
+</html>
+<!-- 
+you can setup a single event handler to handle a type of event for many different elements
+
+EX: you may have many images in a page and want to write a click event handler for them all, saving you the need to duplicate a lot of code.
+		you'll need to determine from the event object the page element in which the event occured.
+		do that with the target property of the event object.
+		
+target property contains an object corresponding to the page element that was the target of the event.
+	ex: if an image was clicked, the event object passsed to its click event handler will contain an object corresponding to the image.
+	
+EX: use the vent object's target property to recover and display the ID value of an image that the user clicked.
+
+-->

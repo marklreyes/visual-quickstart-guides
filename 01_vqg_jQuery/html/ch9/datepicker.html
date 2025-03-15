@@ -1,0 +1,58 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Ch9: Creating Datepicker Widgets | jQuery Visual Start Guide</title>
+
+
+<!-- CSS User Interface (UI) stylesheet-->
+<link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css" rel="stylesheet" type="text/css"/>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
+
+<script type="text/javascript">
+	$(document).ready(function(){
+		$("#datepicker").datepicker({
+	   		onSelect: function(dateText, inst) {$("#result").text("You selected " + dateText)}
+	   	});
+	});
+</script>
+
+<style type="text/css">
+</style>
+</head>
+<body style="font-size:65%;">
+  <h1>Using a datepicker</h1>
+<div type="text" id="datepicker"></div>
+<div style="font-size:100%;" id="result"></div>
+
+</body>
+</html>
+<!-- 
+Datepicker widgets display a clickable calendar 
+control that lets users select dates.
+
+You create a datepicker widget with the datepicker() 
+function, connecting it to the div element in which 
+you want the datepicker widget to appear.
+
+You can read the date the user selected by creating 
+an event handler for the onSelect event, whose handler 
+is passed the data as a text string and an object 
+corresponding to the datepicker widget:
+
+	$("#datepicker").datepicker({
+		onSelect: function(dateText, inst) {
+			$("result").text("You selected" + dateText)} });
+
+jQuery widgets:
+	accordion
+	datepicker
+	dialog
+	progressbar
+	slider
+	tabs
+
+check for new source code from, http://docs.jquery.com/UI/Datepicker
+-->
+

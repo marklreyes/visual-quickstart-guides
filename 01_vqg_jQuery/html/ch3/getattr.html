@@ -1,0 +1,33 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Ch3: Reading Attribute Values | jQuery Visual Start Guide</title>
+<!-- <script type="text/javascript" src="../js/jquery-1.4.2.js"></script> -->
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"> </script>
+<script type="text/javascript">
+function getAlt() {
+	alert($("img").slice(0,1).attr("alt"));
+}
+</script>
+<style type="text/css">
+</style>
+</head>
+<body>
+<h1>Reading an alt attribute</h1>
+<img src="../../images/image1.jpg" alt="This is an image of flowers." />
+<img src="../../images/image2.jpg" alt="This is also an image of flowers." />
+<form>
+	<input type="button" value="Get alt attribute" onclick="getAlt()" />
+</form>
+</body>
+</html>
+<!-- 
+jQuery lets you examine the values of attributes with the attr() function
+
+An easy way of getting elements from a wrapped set is to use the jQuery slice() function
+
+slice(m,n) returns the elements m to n-1 of a wrapped set, so you can get the first element of a wrapped set like this:
+	$("img").slice(0,1).attr("alt")
+
+-->

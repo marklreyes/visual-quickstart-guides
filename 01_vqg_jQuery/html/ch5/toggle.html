@@ -1,0 +1,39 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Ch5: Toggling Element Visibility | jQuery Visual Start Guide</title>
+<!-- <script type="text/javascript" src="../js/jquery-1.4.2.js"></script> -->
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"> </script>
+<script type="text/javascript">
+	$(document).ready(function() {
+		$("button").click(function() {
+			$("h2").toggle(2000);
+		});
+	});
+</script>
+<style type="text/css">
+</style>
+</head>
+<body>
+<h1>Toggling Element Visibility</h1>
+<h2>Now you see me.</h2>
+<h2 style="display: none;">Now you don't.</h2>
+<button>Toggle the text</button>
+</body>
+</html>
+<!-- 
+toggle() function: lets you show an element if it's hidden, or hide it if it's visible
+useful when you have a two-state item, such as a red or green stop and go icon
+
+often use toggle() on pairs of page elements, one of which starts out hidden, and the other visible
+when you toggle the pair of elemen ts, the hidden one appears and the visible one is hidden
+
+EX: toggle the visibility of 2 h2 headers.
+	One header (original visible one) reads "Now you see me."
+	The other (originally hidden) header reads "Now you don't."
+	By clicking a button you'll be able to alternate between these two headers.
+
+
+
+-->

@@ -1,0 +1,51 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Ch8: Handling XML | jQuery Visual Start Guide</title>
+<!-- <script type="text/javascript" src="../js/jquery-1.4.2.js"></script> -->
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"> </script>
+<script type="text/javascript">
+$(document).ready(function(){
+	$.ajax({
+		type: "GET",
+		url: "sandwiches.xml",
+		dataType: "xml",
+		success: callback
+	});
+});
+
+function callback(data, status) {
+	var sandwiches = data.getElementsByTagName("sandwich");
+	listSandwiches(sandwiches);
+}
+
+function listSandwiches (sandwiches) {
+	var loopIndex;
+	var selectControl = document.getElementById('sandwichList');
+		for (loopIndex = 0; loopIndex < sandwiches.length; loopIndex++) {
+			selectControl.options[loopIndex] = new Option(sandwiches[loopIndex].firstChild.data);
+		}
+}
+</script>
+<style type="text/css">
+</style>
+</head>
+<body>
+    <h1>Using $.ajax() to get XML</h1>
+    <form>
+      <select size="1" id="sandwichList">
+        <option>Select a sandwich</option>
+      </select>
+    </form>
+</body>
+</html>
+<!-- 
+Ajax stands for Asynchronous JavaScript and XML
+
+You can specify the data type xml in the $.ajax() 
+function to get back a JavaScript XML object, which 
+you have to unravel by calling various functions.
+
+EX: shows the sandwich types in a <select> control.
+-->

@@ -1,0 +1,37 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Ch7: Callbacks with the load() Function | jQuery Visual Start Guide</title>
+<!-- <script type="text/javascript" src="../js/jquery-1.4.2.js"></script> -->
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"> </script>
+<script type="text/javascript">
+	$(document).ready(function(){
+	  $("div").load("message.txt", callback);
+	});
+	
+	function callback()
+	{
+	$("#targetDiv").text("Got the data.");
+	}
+</script>
+<style type="text/css">
+</style>
+</head>
+<body>
+    <h1>Using the load() function with callbacks</h1>
+    	Got this from the server: <div></div>
+    	<div id="targetDiv"></div>
+</body>
+</html>
+<!-- 
+jQuery load() function works like this:
+	load(url, parameters, callback)
+	
+	url is the URL of the resource you're fetching on the server
+	parameter is a JavaScript object whose properties hold values you want to send to the server
+	callback is a callback function that jQuery will call when the Ajax operation is complete
+	
+EX: Use a callback function. When the Ajax operation is complete, the callback function, if you've specified one, is called.
+	Download message.txt, display a message in the page confirming that the ajax donwload has been completed.
+-->

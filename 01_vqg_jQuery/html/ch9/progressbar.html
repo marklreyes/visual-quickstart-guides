@@ -1,0 +1,49 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Ch9: Creating a Progressbar Widget | jQuery Visual Start Guide</title>
+
+<!-- CSS User Interface (UI) stylesheet-->
+<link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css" rel="stylesheet" type="text/css"/>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
+
+<script type="text/javascript">
+	$(document).ready(function(){
+			$("#progressbar").progressbar({ value: 30 });
+	  	});
+	
+	/*	add a call to display the progressbar widget 
+		and increase the length of the bar when a button is clicked
+	*/
+	function increase() {
+		$("#progressbar").progressbar('value', 80);
+	  }
+</script>
+
+<style type="text/css">
+</style>
+</head>
+<body style="font-size:65%;">
+  <h1>Using a progress bar</h1>
+	<div id="progressbar"></div>
+   	<form>
+    	<input type="button" value="Increase" onclick="increase()"></input>
+   	</form>
+</body>
+</html>
+<!-- 
+Progress bars are horizontal bars that indicate the progress of an operation. 
+Here we'll display a progressbar widget that increases when a button is clicked.
+
+jQuery widgets:
+	accordion
+	datepicker
+	dialog
+	progressbar
+	slider
+	tabs
+
+check for new source code from, http://docs.jquery.com/UI/Progressbar
+-->

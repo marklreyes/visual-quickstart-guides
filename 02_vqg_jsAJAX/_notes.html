@@ -1,0 +1,2239 @@
+<!--*****************************************************************************************************************
+*	WHAT IS JAVASCRIPT?
+*
+*	- JavaScript is a programming language that you can use to add interactivity to your Web pages.
+*	- JavaScript lets you create an active user interface, giving the users feedback as they navigate your pages.
+*	- You can use JavaScript to make sure that your users enter valid information in forms, which can save your business time and money.
+*	- With JavaScript you have the ability create customized Web pages, depending on actions that the user takes.
+* 	- JavaScript controls the browser, so you can open up new windows, display alert boxes, and put custom messages 
+*	  in the status bar of the browser window.
+*	- You can also use JavaScript to deal with forms, set cookies, build HTML pages on the fly, and create Web-based applications.
+*
+*********************************************************************************************************************
+*	WHAT IS AJAX?
+*
+*	- Ajax is shorthand for Asynchronous JavaScript and XML.
+*	- Ajax is the combination of these technologies:
+*		- XHTML
+*		- CSS
+*		- The DOM (Document Object Model) accessed using JavaScript
+*		- XML, the format of the data being transferred between the server and the client
+*		- XMLHttpRequest to retrieve data from the server
+*
+*********************************************************************************************************************
+*	THE SNAP-TOGETHER LANGUAGE
+*
+*	- JavaScript is an object-oriented language.
+*
+*		OBJECT: 
+*			- Some kind of a thing, (i.e. windows and forms, and the elements of the form, such as buttons and check boxes).
+*			- Give objects their own unique names.
+*
+*		PROPERTIES: 
+*			- A window has a title, and a form can have a check box.
+*			- Changing a property of an object modifies that object, and the same property name can be a part of completely different objects.
+*			- (i.e. You have a property called empty. Use empty wherever it applies, the cat's tummy is empty and the cat's bowl is empty.)
+*
+*		METHODS:
+*			- The things that objects can do.
+*			- (i.e. Cats purr, computers crash, and bicycles roll.)
+*			- JavaScript objects also have methods: buttons click(), windows open(), and text can be selected(). 
+*			  The parentheses signal that we're referring to a method, rather than a property.
+*	
+*			TIP: 	
+* 				- Think of objects and properties as nouns. They are things.
+* 				- Think of methods as verbs. They are actions that those things can do, or have done to them.
+*
+*	- DOT SYNTAX: 
+*		- Put objects, properties, and methods together to get a better description of an object, or to describe a process.
+*		- These pieces are separated by periods, dot syntax.
+*
+*			EXAMPLES OF OBJECTS & PROPERTIES:
+*					bicycle.wheels
+*					cat.paws.front.left
+*					computer.drive.dvd
+*					document.images.name
+*					window.status
+*
+*			EXAMPLES OF OBJECTS & METHODS:
+*					cat.purr()
+*					document.write()
+*					forms.elements.radio.click()
+*
+*********************************************************************************************************************
+*	INTRODUCING THE DOCUMENT OBJECT MODEL
+*
+*	- Document Object Model (DOM): the representation of the objects within the document
+*		- The objects that make up the document are representated in a tree structure.
+*		- JavaScript considers each of the items in the document tree to be objects, and you can use JavaScript to manipulate those objects.
+*		- Each of the objects on the tree is also called a node of the tree. 
+*		- Use JavaScript to modify any aspect of the tree, including addidng, accessing, changing, and deleting nodes on the tree.
+*		- Each object on the tree is a node.
+*		- If the node contains an HTML tag, it's referred to as an element node. Otherwise it is a text node.
+*		- Element nodes can contain text nodes.
+*
+*********************************************************************************************************************
+*	HANDLING EVENTS
+*
+*	- EVENTS are actions that the user performs while visiting your page. 
+*	  Submitting a form and moving a mouse over an image are two examples of events.
+*
+*	- JavaScript deals with events using commands called event handlers. 
+*	  An action by the user on the page truggers an event handler in your script.
+*
+*		12 most commont JavaScript Event Handlers
+*			1 - onabort				The user aborted loading the page
+*			2 - oblur				The user left the object
+*			3 - onchange			The user changed the object
+*			4 - onclick				The user clicked an object
+*			5 - onerror				The script encountered an error
+*			6 - onfocus				The user made an object active
+*			7 - onload				The object finished loading
+*			8 - onmouseover			The cursor moved over an object
+*			9 - onmouseout			The cursor moved off an object
+*			10 - onselect			The user selected the contents of an object
+*			11 - onsubmit			The user submitted a form
+*			12 - onunload			The user left the page
+*
+*********************************************************************************************************************
+*	VALUES AND VARIABLES
+*
+*	+ CODECADEMY.COM: 			Any variable in JavaScript is an object or a primitive.
+*										"Hello World" is a string primitive.
+*										5 is a number primitive.
+*										The other primitive types are boolean, null, undefined.
+*
+*										Anything else including functions is an object.
+*
+* 	+ CODECADEMY.COM:			In JavaScript there are 6 values that evaluate to false:	
+*										false
+*										null
+*										undefined
+*										0
+*										""
+*										NaN
+*	
+*	- VALUE: in JavaScript it is a piece of information
+*
+*		Value Types
+*			- Number			Any numeric value						3.141592654
+*			- String			Characters inside quote marks			"Hello, world!"
+*			- Boolean			True or False							true
+*			- Null				Empty and meaningless
+*			- Object			Any value associated with the object
+*			- Function			Value returned by a function
+*
+*	- VARIABLES: contain values
+*		
+*		EX: Variable myName is assigned the string "Dori" 
+*			Another way to write this is myName = "Dori"
+*			The equals ign can be read as "is set to"
+*			In other words, the variable myName now contains the value "Dori"
+*
+*	- OPERATORS: the symbols used to work with variables. 
+*
+*	+ CODECADEMY.COM:			Bang Operator (!) is used to change a truth value to a false and vice versa.
+*										!true is false
+*										!null is true
+*
+*		Operators
+*			x + y (Numeric)			Adds x and y together
+*			x + y (String)			Concatenates x and y together
+*			x - y					Subtracts y from x
+*			x * y					Multiplies x and y together
+*			x / y 					Divides x by y
+*			x % y					Modulous of x and y (i.e., the remainder when x is divided by y)
+*			x++. ++x				Adds one to x (same as x = x + 1)
+*			x--, --x				Subracts one from x (same as x = x - 1)
+*			-x						Reverses the sign of x		
+*
+*			TIP: 	x++, increments x after the assignment is complete
+*							if x is 5
+*							y=x++ results in y set to 5 and x set to 6
+*
+*					++x, increments x before the assignment is complete
+*							if x is 5
+*							y=++x results in both x and y set to 6
+*
+*					If you mix numeric and string values when adding two values together, the result is a string. 
+*							cat + 5 results in cat5
+*
+*********************************************************************************************************************
+*	ASSIGNMENTS AND COMPARISIONS
+*	
+*	- ASSIGNMENT: put value into a variable, using an assignment operator to do the job.
+*		
+*		EX: Use the equals operator to make an assignment, such as hisName = "Tom"
+*
+*		Assignments
+*			x = y			Sets x to the value of y
+*			x += y			Same as x = x + y
+*			x-= y			Same as x = x - y
+*			x *= y			Same as x = x * y
+*			x /= y			Same as x = x / y
+*			x %= y			Same as x = x % y
+*
+*	- COMPARISIONS: compare the value of one variable with another, or the value of a variable 
+*					against a literal value (i.e. value typed into the expression)
+*		
+*		EX: Compare the value of the day of the week to "Tuesday", and you can do this by checking if todaysDate == "Tuesday"
+*	
+*			TIP:	If you are comparing strings, be aware that "a" is greater than "A" and that "abacadabra" is less than "be".
+*
+*		Comparisions
+*			x == y			Returns true if x and y are equal
+*			x != y			Returns true if x and y are not equal
+*			x > y			Returns true if x is greater than y
+*			x > = y			Returns true if x is greater than or equal to y
+*			x < y			Returns true if x is less than y
+*			x <= y			Returns true if x is less than or equal to y
+*			x && y			Returns true if both x and y are true
+*			x || y			Returns true if either x or y is true
+*			!x				Returns true if x is false
+*
+*	+ CODECADEMY.COM:			In JavaScript, == coerces values, which can lead to unexpected results. Remember to use === and !==
+*
+*********************************************************************************************************************
+*	WRITING JAVASCRIPT-FRIENDLY HTML
+*
+*	- Because you'll be using JavaScript to manipulate the objects within a document, you want to write your HTML in 
+*	  a way that can be easily used by your scripts.
+*
+*	- Your JavaScript should be an external document, one that contains only JavaScript code.
+*
+*	- Your site will contain three types of text files:
+*			1 - XHTML: 			contains the content and structure of the page
+*			2 - CSS: 			controls the appearance and presentation of the page
+*			3 - JavaScript: 	controls the behavior of the page
+*
+*	- DIVS and SPANS: used to break up content into semantic chunks (chunks with simiar meaning)
+*	
+*		Things inside a single table cell or paragraph may or may not have anything in common, but the content within each 
+*		div and span should.
+*
+*			Div: block-level element, there's a physical break between it and the lemenst above and below it.
+*			Span: isn't block-level, it's inline. You can apply a single phrase within a sentence.
+*
+*		Add these two tags to your toolkit of solutions, and you'll be surprised how often you use them.
+*
+*	- CLASSES and IDS: use these attributes when you want to change their presentation or behavior.
+*		
+*		- CSS uses these attributes as part of rules to define the appearance of a page.
+*		- JavaScript uses these attributes in code that affects the behavior of elements on the page.
+*			
+*		Once we've assigned classes and ids to our divs and spans we can modify those elements behavior with JavaScript.
+*
+*********************************************************************************************************************
+*	WHAT TOOLS TO USE?
+*
+*	- Text Editor
+*		PC: Notepad
+*		MAC: TextEdit
+*		UNIX: Emacs
+*
+*********************************************************************************************************************
+*	WHERE TO PUT YOUR SCRIPTS
+*	
+*	- Scripts can be put in one of two places on an HTML page:
+*		1 - between the head tags
+*		2 - between the body tags
+*
+*	- Opening script tag tells the browser to expect JavScript instead of HTML.
+*	- The attribute, type="text/javascript" tells the browser that the script is plain text, organized as JavaScript.
+*			<script type="text/javascript">
+*			</script>
+*
+*********************************************************************************************************************
+*	ABOUT FUNCTIONS
+*
+*	- A function is a set of JavaScript statements that performs a task. 
+*	- Every function must be given a name and can be invoked, or called, by other parts of the script.
+*	- Functions can be called as many times as needed during the running of a script.
+*		
+*		EX: You've got some information that a user typed into a form, and you've saved it using JavaScript.
+*			If you need to use that information again and again, you could repeat the same code over and over
+*			in your script. But it's better to write that code once as a function and then call the function
+*			whenever you need it.
+*
+*	- A function consists of the word function follwed by the function name. There are always parentheses after
+*	  the function name, followed by an opening brace. The statement that make up the function go on the following
+*     lines, and then the function is closed by another brace. Here's what a function looks like:
+*
+*		function saySomething() {
+*			alert("Four score and seven years ago");
+*		}
+*
+*		Notice that the alert is indented. That makes it easier to read your code. All of the satements between the first
+*		brace and the last one are part of the function.
+*
+*	- Member Function: a function that is a property of an object
+*		You are de-binding its this value, ie the context in which it runs
+*		http://james.padolsey.com/javascript/terse-javascript-101-part-2/
+*
+*
+*
+*********************************************************************************************************************
+*	USING EXTERNAL SCRIPTS
+*
+*	- You'll often want multiple HTML pages to share the same script.
+*	- Include a reference to an external script, a separate file that just contains JavaScript.
+*	- The external file is called a .js file 
+*	- Individual pages call the .js file simply adding a new attribute, src, to the script tag.
+*
+*********************************************************************************************************************
+*	PUTTING COMMENTS IN SCRIPTS
+*
+*	- Multi-line comments, /* lorem ipsum dolor lorem ipsum dolor */
+*	- Single-line comments, //lorem ipsum
+*
+*********************************************************************************************************************
+*	ALERTING THE USER
+*	
+*	- To alert a user:
+*			alert("Welcome to my JavaScript page!");
+*
+*********************************************************************************************************************
+*	CONFIRMING A USER'S CHOICE
+*
+*	- Conditionals break down into three parts:
+*			1 - the 'if' section, where we do our test.
+*			2 - the 'then' section, where we put the part of the script we want to do if the result is true.
+*			3 - an optional 'else' section, contains the part of the script we want to have happen if the result of the test is not true.
+*
+*			The contents of what we're testing in the if section are in parantheses, and the contents of the other two sections
+*			are each contained in braces.
+*
+*********************************************************************************************************************
+*	WHAT IS 'this'?
+*	
+*	- The JavaScript keyword 'this' allows the script to pass a value to a function, soley based on the context where the 
+*	  keyword is used.
+*
+*********************************************************************************************************************
+*	DOM SCRIPTING
+*	
+*	- An approach to scripting web pages using JavaScript, in which the code only modifies pages via manipulation of the W3C DOM
+*	- document.getElementById("redirect").onclick is an example of DOM scripting in action
+*
+*********************************************************************************************************************
+*	UNOBTRUSIVE SCRIPTING
+*	
+*	- Where the code is separated out from the HTML, so that both are more flexible.
+*
+*********************************************************************************************************************
+*	LOOPS
+*	
+*	- Example: 
+*		Doing a search and replace in a word processor. You search for one bit of text, change it to a different 
+*		text string, repeat the processes for all of the instances of the first string in the document. Now imagine
+*		that you have a program that does it for you automatically. The program would execute a loop, which lets it
+*		repeat an action a specified number of times.
+*
+*	- For Loop: uses a counter, which is a variable that begins with one value (usually 0) and ends when a conditional
+*				test inside the loop is satisfied.
+*				
+*				The command that starts the loop structure is immediately followed by parantheses. Inside the parantheses
+*				you'll usually find the counter definition and the way the counter is incremented.
+*
+*				A for loop has three parts:
+*
+*					i=0; i<userNum; i++
+*
+*					1 - Initialization, i=0
+*						the first time through the loop
+*
+*					2 - The limiting step, i<userNum
+*						where we say when to stop looping
+*
+*					3 - The increment step, i++
+*						where we say by how much to increase the loop counter on each pass through the loop
+*
+*********************************************************************************************************************
+*	PASSING
+*	
+*	- Take some information and give it to a function to use.
+*			
+*			function playBall(batterup)
+*			
+*			- Variable batterup is a 'parameter' of the function
+*			- When you are inside the function, the data is in the batterup variable
+*			- Functions can be passed data i.e. text strings, numbers, other JavaScript objects
+*
+*			EX: batterup variable could be passed a player's name as a text string ("Mantle") or his number in the lineup (7)
+*
+*			- You can use more than one parameter in a function, just separate them inside the parantheses with commas.
+*			
+*			function currentScore(hometeam,visitors)
+*
+*			- 	Underscore the parameters and variables, so they can be passed a variety of different values 
+*				when the function is called. So these code fragments are all equivalent:
+*				
+*				currentScore(6,4);
+*
+*				var homeScore = 6;
+*				var visitingScore = 4;
+*				currentScore(homescore, visitingScore);
+*
+*				currentScore(6,3+1);
+*
+*				For all 3 examples, once we're inside the currentScore(), the value of the hometeam is 6 and the value of visitors is 4.
+*
+*********************************************************************************************************************
+*	DETECTING OBJECTS
+*	
+*	- You may want to check to see if the browser is smart enough to understand the objects you want to use. 
+*	- This is called 'object detection'.
+*
+*	- Pose a question for the object you're looking for:
+*
+*		if (document.getElementById) {
+*
+*			If the object exists, the if statement is true and the script continues
+*			If the browser doesn't understand the object, the test returns false, and the else portion of the conditional executes.
+*
+*	- An alternate way to try and figure which objects a browser supports is to do a 'browser detect'
+*	  which tries to identify the browser being used to view the page. It gets this be requesting the 
+*	  user agent string from the browser, which reports the browser name and version.
+*
+*********************************************************************************************************************
+*	WORKING WITH ARRAYS
+*	
+*	- Array: kind of variable that can store a group of information.
+*	- It can contain data such as: text strings, sumbers, other JavaScript objects
+*	- Declare an array with the elements of the array inside parantheses, separated by commas:
+*		
+*		var newCars = new Array("Toyota", "Honda", "Nissan");
+*
+*		To access the contents of the array, you use the variable name with the index number of the array member you want to use in square brackets.
+*		newCars[2] has the value of "Nissan"
+*
+*********************************************************************************************************************
+*	A BIT ABOUT BITS
+*	
+*	- Bitwise Arithmetic: use 'and' and 'or' on numbers greater than 1
+*		
+*			and (&)	
+*			when we 'and' two bits together, if they're both true (that is, both 1), the result is true. Otherwise, the result is false.
+*
+*			or (|)
+*			when we 'or' two bits together, if either is true (that is, either is 1), then the result is true. If they're both false, the 
+*			result is false.
+*
+*********************************************************************************************************************
+*	GETTING WISE ABOUT BITS
+*
+*	- Bitwise Arithmetic: take advantage of the way computers internally keep track of everything as 1s and 0s
+*
+*********************************************************************************************************************
+*	HTML: IMAGES
+*	
+*	*Tag*		*Attribute*			*Meaning*
+*	 img							 	contains the attributes that describe the image to be displayed by the browser
+*					src				 	contains the URL of the image, relative to the URL of the web page	
+*					width				contains the width (in pixels) at which the browser will display the image
+*					height				contains the height (in picels) at which the browser will display the image
+*					border				the width of the border to be displayed
+*					name				name that JavaScript uses to refer to this image; as w/ other JavaScript objects,
+*										no spaces or other punctuation is allowed, and it cannot start with a number
+*					alt					used for noni-visual browsers in place of the image
+*					hspace				a horizontal buffer area around the image
+*					vspace				a vertical buffer area around the image
+*					align				describes where this image should be placed on the page in terms of horizontal or vertical
+*										alignment
+*					id					a unique identifier, which JavaScript will use to manipulate the image
+*
+*********************************************************************************************************************
+*	HTML: FRAMES
+*	
+*	*Tag*		*Attribute*			*Meaning*
+*	 frametag							specifies that the page consists of two or more framed pages; contains the 
+*										frame tags that specify the particular pages.
+*					cols				the column dimensions (proportional/fixed), in pixels, of each frame.
+*	 frame								the location and attributes of each framed page.
+*					id					used by JavaScript to refer to one of the pages in the frameset.
+*					name				an alternate method by which JavaScript can refer to one of the pages in the frameset.
+*					src					the physical location (ie URL) of the page loaded into the frame.
+*	 iframe								an internal frame, displayed inside the calling HTML page.
+*					id					JavaScript uses this to refer to the iframe.
+*					name				Javascript can alternately use this to refer to the iframe.
+*					src					the URL of the iframe page.
+*					width				the width (in pixels or percent) of the iframe.
+*					height				the height (in pixels or percent) of the iframe.
+*					align				aligns the iframe right or left.
+*					frameborder			displays a border around the iframe.
+*
+*********************************************************************************************************************
+*	JAVASCRIPT STRINGS
+*
+*	Q: When does a word like 'cat' have a 't' in the second position?
+*	A: When it's a JavaScript string.
+*
+*	In JavaScript the first character is at position 0.
+*		C is position 0
+*		A is position 1
+*		T is position 2
+*
+*	Only when checking the length of cat do we actually see a value of 3. 
+*	All other string methods are zero-based; that is, they start with 0.
+*
+*********************************************************************************************************************
+*	ADDING PARAMETERS TO WINDOWS
+*	
+*	To add one or more parameters to your windows, state them in the open() command enclosed in quotes, 
+*	with =yes after the name of a feature you want and =no fter one you don't want.
+*
+*	EX: if you want a window of a specified size with a toolbar, location box, and scrollbars
+*			toolbar=yes,location=yes,scrollbars=yes,width=300,height=300
+*		
+*		as part of the open command. Note that the window created would not have a menu bar or a status bar, and would not be resizable.
+*
+*	Given that leaving a parameter off entirely is the same as setting it to =no, 
+*	you can also just use the name of the parameter itself (without the =yes) to turn it on.
+*	
+*	B/c there are some exceptions, we've preferred to make it a little more obvious in these scripts as 
+*	to what we're turning on and off-consequesntly, we've combined them, followed by a yes or no
+*		(i.e. location,scrollbars=yes means the same thing as location-yes,scrollbars=yes)
+*
+*	We could also just say, location,scrollbars but it wouldn't be as clear what was going on.
+*
+*********************************************************************************************************************
+*	HTML: FORMS
+*	
+*	*Tag*		*Attribute*			*Meaning**
+*	form								A tag that contains any of the following tags, making them into a valid HTML form
+*					action				The name of the server-side CGI that is run when control is passed back to the web server
+*	input								A form field of varying types, depending on the vlue of the type attribute
+*					class				The class assigned to the element
+*					id					The unique id assigned to the element
+*					name				Primarily used to group sets of radio buttons; also is a name that JavaScript 
+*										can use to refer to this field; as with other JavaScript objects, no spaces or other 
+*										punctuation is allowed,, and it cannot start with a number
+*					maxlength			The maximum length entry that the user may enter in this field
+*					size				The number of characters that are displayed on the page
+*					type				The type of input required; possible values are button, checkbox, 
+*										image, password, radio, reset, submit, and text
+*					value				The preset value of this form field
+*	label								Used to specify labels for controls that do nto have built-in labels, such as text fields, 
+*										check boxes, radio buttons, and menus 
+*					for					Associateds the label with a specific element's id
+*	option								The possible options available inside a select tag 
+*					selected			Indicates whether this option is selected as the default
+*					value				The preset value of each option
+*	select								A form field that is either a pop-up menu or scrolling list, based on the size attribute 
+*					class				The class assigned to the element
+*					id					The unique id assigned to the element
+*					value				The number of options that are displayed on the pagel if the attribute is set to 1, 
+*										or this attribute is not present, the result is a pop-up menu
+*
+*********************************************************************************************************************
+*	ACCOMODATING THE JAVASCRIPT-IMPAIRED USER
+*
+*	The point of Ch.7: Select-and-Go Navigation is to use JavaScript to eliminate the need for a Go button when using 
+*	a form to jump from one page to another. 
+*
+*	http://www.marklreyes.com/tutorials/2_vqg_jsAJAX/html/ch7/script01.html
+*
+*	But what if the user has JavaScript turned off?
+*	Put a GO button that's only visible in the absence of JavaScript.
+*	The only way to get from one page to another with a form but w/o JavaScript is to use a CGI, a program running on the Web server.
+*
+*	<form action="gotoLocation.cgi">
+*
+*	The form tag has the action attribute, which calls the CGI. But a form action requires the user to click a submit button 
+*	which isn't shown in script01.html. Only when JavaScript is turned off, is when the button will show. These lines contain 
+*	the button, wrapped in noscript tags, which are only exectuted if JavaScript is missing.
+*
+*		<noscript>
+*			<input type="submit" value="Go There!" />
+*		</noscript>
+*
+*	A CGI only ever gets called if JavaScript is missing.
+*
+*********************************************************************************************************************
+* 	RADIO BUTTONS: are an either/or interface element that let the user pick one choice within a group of options.
+*
+*********************************************************************************************************************
+*	REGULAR EXPRESSIONS aka 'RegExp' aka 'grep'
+*	
+*	Are a powerful way to validate and format strings. Using regular expressions, you can write a line or two of JavaScript code that can 
+*	accomplish tasks that otherwise would have taken several dozen lines.
+*
+*	RegExp is a pattern written using special symbols, which describes one or ore text strings. You use RegExp to match patterns
+*   of text, so that your script can easily recognize and manipulate text. Like an arithmetic expression, you create a RegExp by using
+*	operators, in this case operators that work on text rather than numbers.
+*
+*********************************************************************************************************************
+*	REGULAR EXPRESSION SPECIAL CHARACTERS
+*
+*	*Characters*				*Matches*
+*		\							Toggles between literal and special characters; for example, "\w" means the special value of 
+*									"\w" instead of the the literal "w" but "\$" means to ignore the special value of "$" and use 
+*									the "$" character instead
+*		^							Beginning of a string
+*		$							End of a string
+*		*							Zero or more times
+*		+							One or more times
+*		?							Zero or one time
+*		.							Any character except newline
+*		\b							Word boundary
+*		\B							Non-word boundary
+*		\d							Any digit 0 through 9 (same as [0-9])
+*		\D							Any non-digit
+*		\f							Form feed
+*		\n							New line
+*		\r							Carriage return
+*		\s							Any single white space character {same as [ \f\n\r\t\v])
+*		\S							Any single non-white space character
+*		\t							Tab
+*		\v							Vertical tab
+*		\w							Any letter, number, or the underscore (same as[a-zA-Z0-9_])
+*		\W							Any character other than a letter, nu,ber, or underscore
+*		\xnn						The ASCII character defined by the hexadecimal number nn
+*		\onn						The ASCII character defined by the octal number nn
+*		\cX							The control character X
+*		[abcde]						A character set that matches any one in the range of enclosed characters
+*		[^abcde]					A complemented or negated character set; one that does not match any of the enclosed characters
+*		[a-e]						A character set that matches any one in the range of enclosed characters
+*		[\b]						The literal backspace character (different from \b)	
+*		{n}							Exactly n occurences of the previous character
+*		{n,}						At least n occurences of the previous character
+*		{n,m}						Between n and m occurences of the previous character
+*		()							a grouping, which is also stored for later use	
+*		x|y							Either x or y
+*
+*********************************************************************************************************************
+*	REGULAR EXPRESSION MODIFIERS
+*
+*	*Modifier*				*Meaning*
+*		g						Search for all possible matches (globally), not just the first	
+*		i						Search without case-sensitivity
+*
+*********************************************************************************************************************
+*	EXTRACTION STRINGS
+*
+*	String 'extraction' is useful; being able to take just part of a string and manipulate it allows 
+*	you to have more control over the final result.
+*
+*********************************************************************************************************************
+*  PROPERTIES OF THE REGEXP OBJECTS
+*	
+*	*Properties*				*Meaning*
+*		$1 (through $9)				Parenthesized substring matches
+*		$_							Same as input
+*		$*							Same as multiline
+*		$&							Same as lastMatch
+*		$+							Same as lastParen
+*		$`							Same as leftContext
+*		$'							Same as rightContext
+*		constructor					Specifies the function that creates an object's prototype
+*		global						Search globally (g modifier in use)
+*		ignoreCase					Search case-insensitive (i modifier in use)
+*		input						The string to search if no string is passed
+*		lastIndex					The index at which to start the next match
+*		lastMatch					The last matched characters
+*		lastParen					The last parenthesized substring match
+*		leftContext					The substring to the left of the most recent match
+*		multiline					Whether strings are searched across multiple lines
+*		prototype					Allows the addition of properties to all objects
+*		rightContext				The substring to the right of the most recent match
+*		source						The regular expression pattern itself
+*
+*********************************************************************************************************************
+*	METHODS OF THE REGEXP OBJECT
+*	
+*	*Methods*										*Meaning*
+*		compile(pattern,[, "g" | 'i" | "gi"])			Compiles a regular expression
+*		exec(string)									Executes a search for a match
+*		test(string)									Tests for a match	
+*		toSource()										Returns a literal representing the object	
+*		toString()										Returns a string representing the specified object
+*		valueOf()										Returns the primitive value of the specified object
+*
+*********************************************************************************************************************
+*	STRING METHODS
+*
+*	*Methods*										*Meaning*
+*		match(re)										Finds a match for a regular expression pattern (re) within a string
+*		replace(re,replaceStr)							Using the regular expression (re), performs the desired replacement
+*		search(re)										Searches for a match to the regular expression (re)	
+*		split(re)										Splits a string based on a regular expression(re)
+*
+*********************************************************************************************************************
+*	ABOUT THE REGEXP OBJECT
+*
+*	JavaScript has a built-in Regexp object that's automatically set (and reset) everytime a script executes
+*	a regular expression method (given in METHODS OF THE REGEXP OBJECT and STRING METHODS tables).
+*
+*	The RegExp object isnt a variable that contains the result of the regular expression operation, but rather it contains
+*	the 'pattern' described by the regular expression, in a form that can be used in your scripts via the RegExp object's properties
+*	and methods.
+*
+*********************************************************************************************************************
+*	EVENTS
+*
+*	Events are actions that the user performs while visiting your page. When the browser detects an event, such as a 
+*	mouse click or a key press, it can trigger JavaScript objects associated with that event, called 'event handlers'.
+*
+*********************************************************************************************************************
+*	HANDLING WINDOW EVENTS
+*
+*	Window events occur when the user does something affecting an entire brwoser window. The most common window event is simply loading
+*	the window by opening a particular web page. You can also have events that trigger event handlers when windows are closed, moved,
+*	or event sent to the background.
+*
+*	When working with event handlers, you'll often find it useful to connect an evet handler to an object using dot syntax, like so:
+*			window.focus
+*			window.onload
+*			document.mousedown
+*
+*	Note, when you use the event handler as part of an object like this, the event handler is written all in lowercase. Also, keep your
+*	event handlers in external scripts, rather than placing them inside the HTML tag-this approach is more standards compliant, it 
+*	separates out the JavaScript code from the HTML code, and it's easier to edit (or replace), all your JavaScript code in an external file.
+*
+*	- THE ONLOAD EVENT
+*		It is triggered when the user enters your page and all its elements have completed loading.
+*	
+*	- THE ONUNLOAD EVENT
+*		The onunload handler is triggered when the user leaves your web page. The most common use for this is advertising windows that pop up
+*		when you leave some commercial sites, especially pornographic sites. If you find yourself on one of the latter, you'll often find that 
+*		that it's almost impossible to leave-every time you close a window or attempt ot navigate away from the site, window after window 
+*		appears,re-opening the same or other pages, all of the same genre.
+*
+*		Consequently, people have come to hate the onunload handler w/ a passion, so use it sparingly.
+*
+*	- THE ONRESIZE EVENT
+*		If a user came in and either the height or the width of the window has changed, the user resized the window, and we want to force the 
+*		page to reload. If the browser window size hasn't changed, the onresize handler is triggered drawing scrollbars and it 
+*		can't be ignored.
+*	
+*	- THE ONMOVE EVENT
+*		The onmove event handler is triggered when the window is moved.
+*
+*	- THE ONABORT EVENT
+*		The onabort event handler is triggered when the user cancels an image loading on the web page. It's not used very often, and not all 
+*		browsers seem to fully support it.
+*
+*	- THE ONERROR EVENT
+*		The onerror event may be triggered when a JavaScript error occurs on the page.
+*
+*		TIP:
+*			- It can be polite to set onerror = null; in complex pages you put on the web. With this line of code on your page, 
+*		  	  some error messages will not be displayed to the user in the unfortunate event that there's a problem-but which errors 
+*		  	  will be hidden depends on the browser.
+*
+*	- THE ONFOCUS EVENT
+*		The onfocus handler triggers when a page becomes the front-most active window. It catches the onfocus handler and forces the page to
+*		always go to the back.
+*
+*	- THE ONBLUR EVENT
+*		If you have a window that you always want to remain in front of all your other windows (ie a control panel that loads content on the
+*		main page), it forces its way back up to the front again.
+*
+*********************************************************************************************************************
+*	MOUSE EVENT HANDLING
+*		Many of the user's interactions with your pages come in the form of mouse movements or mouse clicks. JavaScript provides a robust 
+*		set of handlers for these events.
+*
+*	- THE ONMOUSEDOWN EVENT
+*
+*	- THE ONMOUSEUP EVENT
+*		Similar to the onmousedown event, the onmouseup event is triggered when the user clicks the mouse and then releases the button.
+*
+*	- THE ONMOUSEMOVE EVENT
+*		The onmousemove event is triggered whenever a visitor to your page moves their mouse.
+*
+*	- THE ONMOUSEOVER EVENT
+*		You should be familiar with this event from image rollovers. This event will be triggered whenever the mouse is moved into any area 
+*		for which the onmouseover has been registered.
+*
+*	- THE ONMOUSEOUT EVENT
+*		Where there's an onmouseover, there's usually an onmouseout event. This is triggered when the user moves the mouse out of an area for 
+*		which the event has been registered.
+*
+*	- THE ONDBLCLICK EVENT
+*		There's no double-clicking on the web, yet users learn to double-click with the mouse. This handler will be able to check for that.
+*
+*	- THE ONCLICK EVENT
+*		The onclick handler works in a similar fashion to the ondblclick handler, except that a single click triggers instead of a double
+*		click. The onmouseup handler is also similar, except that the onclick requires that the user press the mouse button both down and
+*		up in order to be triggered, while the onmouseup requires just the latter.
+*
+*********************************************************************************************************************
+*	FORM EVENT HANDLING
+*
+*		You'll want to use form event handling mainly for validating forms. With the events listed below, you can deal with just about any
+*		action the user takes with forms.
+*
+*	- THE ONSUBMIT EVENT
+*		The onsubmit handler is triggered when the user clicks the submit button to complete a form. In addition, depending on the browser,
+*		it can also be triggered when a user exists the last text entry field on a form. If a script contains an onsubmit handler, and the
+*		result of the handler is false, the form will not be sent back to the server.
+*
+*	- THE ONRESET EVENT
+*		The onreset handler is triggered when the user clicks the reset button (if one is present) on a form. This can be handy if your form
+*		has default values that are set when the page loads-if the user clicks reset, you'll need to handle this situation with a script 
+*		that resets the default values dynamically.
+*
+*	- THE ONCHANGE EVENT
+*		The onchange event handler is triggered when the user changes a form field. This cab used to verify they entered information
+*		immediately, or to respond to the user's choice before they click the submit button.
+*
+*	- THE ONSELECT EVENT
+*		The onselect handler is triggered if the user selects text in either an input or a textarea form field.
+*
+*	- THE ONCLICK EVENT
+*		It's most commonly used when dealing with forms.This event is triggered when the user click a check box or radio button also uses
+*		the onclick handler. In that case, it allows a single link to do one action for JavaScript enabled browsers and another, entirely
+*		different action, for browsers without JavaScript.
+*
+*	- THE ONBLUR EVENT
+*		While the onblur handler can be used for browser windows, it's more common for it to be used in forms.
+*
+*	- THE ONFCOUS EVENT
+*
+*********************************************************************************************************************
+*	KEY EVENT HANDLING
+*
+*	Besides the mouse, the other main input device is the keyboard. Just as with the mouse, JavaScript has the mojo to handle the keyboard.
+*
+*	- THE ONKEYDOWN EVENT
+*
+*	- THE ONKEYUP EVENT
+*		The onkeyup event handler is identical to the onkeydown handler, except that it gets called when the user has completed pressing the 
+*		key down and is now letting it come back up again.
+*
+*	- THE ONKEYPRESS EVENT
+*		the onkeypress event is triggered when the user both presses a key down and also lets the key back up again-just 
+*		for completeness's sake.
+*
+*		TIP:
+*			- If you're not sure what the key values are for a particular key, you can find out by putting the line alert(thiskey); in
+*			  between the lines of code in steps 5 and 6, then, press the key for which you want to fund the value. The aler box contains 
+*			  the numerica key value. (SEE SCRIPT10.JS VIA CHAPTER 9)
+*********************************************************************************************************************
+*	MOUSE CLICK CODES
+*
+*	*Code*					*Browser/Event*
+*	  1							Internet Explorere/left-click, All Mac browsers/Control-left-click
+*	  2							Internet Explorer/Right-click
+*	  3							Firefox/Right-click, All Mac browsers/Right-click
+*
+*********************************************************************************************************************
+*	JAVASCRIPT AND COOKIES
+*
+*	- Cookie: a unique nugget of information that a web server gives to your browser when the two first meet and which they then share 
+*			  with each return visit. The remote server saves its part of the cookie and the information it contains about you; your 
+*			  browser does the same, as a plain text file stored on your computer's hard disk.
+*
+*	- If your site requires registration, you can set cookies to store your readers' user names and passwords on their hard drives, so they
+*	  they don't need to enter them every time they visit.
+*	
+*	- You can keep track of which parts of your site the user has visited and count the number of visits from that user.
+*
+*	- You can't get any real infomration about the user such as their email address; you can't use cookies to check out the contents of their
+*	  hard disks; and cookies can't transmit computer viruses.
+*
+*	- A cookies is just a simple text file on the user's hard disk where you, the JavaScript programmer, can store some information.
+*
+*	- A cookie always includes the address of the server that sent it. The primary idea behind cookie technology: identification. Think of
+*	  it is Caller ID for the web.
+*
+*	- When you return to the web server that first passed you a particular cookie, the server can query your browser to see if you are one of 
+*	  its many cookie holders. If so, the server can then retrieve the information stored in the cookie the two of you originally exchanged.
+*	  Keep in mind that cookies just identify the computer being used, not the individual using the computer.
+*
+*	- A cookie is a text string with a particular format:
+*		cookieName=cookieValue;	
+*		expires=expirationDateGMT; path=URLpath;
+*		domain=siteDomain
+*
+*		The first part of the string gives the cookie a name and assigns it a value. This is the only mandatory part of a cookie. The rest of
+*		the string is optional. 
+*
+*		Next is the expiration date of the cookie; when this date is reached, the browser automatically deletes the cookie. The expiration
+*		date is followed by a URL path, which lets you store a URL cookie.
+*
+*		Finally, you can store a domain value in the cookie.
+*
+*********************************************************************************************************************
+*	A FISTFUL OF COOKIES
+*
+*	- You can have multiple cookies on a page, and the format for this is:
+*			cookieName1=cookieValue1; expires1=expirationDateGMT1; path1=sitePath1; domain1=siteDomain1;
+*			cookieName2=cookieValue2; expires2=expirationDateGMT2; path2=sitePath2; domain2=siteDomain2;
+*
+*	- The only mandatory fields are the name and value pair.
+*
+*	- The split("; ") command splits the multiple cookie record into an array, with each cookie in a cookie record numbered from 0 on.
+*
+*	- Note that this is the space after the semicolon in this command. So cookieArray[0] would be the first cookie in the multiple cookie
+*	  record, cookieArray[1] would be next, and so on. For more, see Ch:10 Handling Multiple Cookies.
+*
+*********************************************************************************************************************
+*	READING A COOKIE
+*
+*	- Once you've set a cookie, you'll need to retrieve it in order to do anything useful.
+*
+*********************************************************************************************************************
+*	USING COOKIES AS COUNTERS
+*
+*	- Because a cookie is specific to a user, you can only tell that user how many times he or she has visited you
+*	- You can't use cookies to tell all users how many times the page has been hit.
+*
+*********************************************************************************************************************
+*	DELETING COOKIES
+*
+*	- One technique that works well is to simply set the cookie's expiration date to a date in the past, which causes the browser
+*	  to delete it automatically.
+*
+*********************************************************************************************************************
+*	DISPLAYING "NEW TO YOU" MESSAGES
+*
+*	- You can use cookies and JavaScript to alert frequent visitors to your site to items that are new to them.
+*
+*********************************************************************************************************************
+*	MORE ABOUT substring()
+*
+*	- The command substring(to, from) returns the characters in a string, starting with the to position and ending with the character
+*	  just before the from position, zero-relative. If the string contains "20060807" and you want characters 5 and 6, you want to use
+*	  substring(4,6). Your result is the string "08"
+*
+*	- The from parameter is optional; leaving it off means you'll get the string starting from the to position all the way to the end.
+*
+*********************************************************************************************************************
+*	OBJECTS AND THE DOM
+*
+*   Node manipulation is the W3C-recommended way for standards-compliant browsers to support web pages that act more like applications 
+*	than the standard static pages. 
+*
+*********************************************************************************************************************
+*	ABOUT NODE MANIPULATION
+*
+*	- DOM-2 AND THE W3C
+*		The W3C has released specifications for how browsers should handle the Doucment Object Model.
+*		
+*		The DOM Level 2 specification goes into more depth as to how browsers should be able to refer to and manage the content of
+*		their pages. See, http://www.w3.org/TR/DOM-Level-2-Core/
+*
+*	- DOM-2 TERMINOLOGY
+*		A different way to look at HTML pages, as a tree structure with 'nodes'.
+*		
+*		<html>
+*		<head>
+*			<title>My page</title>
+*		</head>
+*		<body>
+*			<p>This is text on my page</p>
+*		</body>
+*		</html>
+*	
+*		We can use JavaScript to modify any aspect of this tree, including add, access, change and delete nodes on the tree.
+*		Each box on the tree is a node.
+*		If the node contains an HTML tag, it's referred to as an 'element node'.
+*		Otherwise, it's referred to as a 'text node'.
+*		Element nodes can contain text nodes.
+*
+*	- DOM-3
+*		Level 3 specification is at http://www.w3.org/TR/DOM-Level-3-Core/
+*		Learn more about DOM-3, look at ECMAScript bindings, http://www.w3.org/TR/DOM-Level-3-Core/ecma-script-binding.html
+*
+*********************************************************************************************************************
+*	ABOUT OBJECT LITERALS
+*
+*	- Standard procedural JavaScript, like what you've seen so far, has been in the dot notation format:
+*
+*		var myCat = new Object;
+*		mycat.name = "Pixel";
+*		myCat.breed = "Tuxedo";
+*		myCat.website = "www.pixel.mu";
+*
+*		function allAboutMyCat {
+*			alert('Can I tell you about my cat?');
+*			tellMeMore = true;
+*		}
+*
+*	- Where in object literal format, that same code would be something like this:
+*
+*		var myCat = {
+*			name : "Pixel",
+*			breed: "Tuxedo",
+*			website: "www.pixel.mu",
+*			allAbout: function() {
+*				alert("Can I tell you about my cat?");
+*				tellMeMore = true;
+*			}
+*		}
+*
+*	- With either format, you can refer to a propery of myCat as myCat.name (for instance). However, with object literal format,
+*	  the function becomes myCat.allAbout() instead of allAboutMyCat().
+*
+*	- If at this point you're thinking that this looks sort of familiar, pat yourself on the back-it's very similar, in many ways
+*	  to CSS. At it's most basic level, it's a list of property and value pairs, with the colon in between and a seperator around
+*     each pair.
+*
+*	- Some differences to remember when using object literals:
+*		* Properties are set using : not =.
+*		* Lines end with , instead of ;.
+*		* No comma is needed on the last statement inside the object.
+*
+*********************************************************************************************************************
+*	WHY OBJECT LITERALS?
+*
+* 	- There are several reasons why a programmer might want to use the object literal versus procedural approach to JavaScript:
+*
+*		* Because each object (including methods and properties) is contained within one parent object, you never run into a
+*		  problem with overwriting other people's code. If you and you co-worker both have a variable called myText in your 
+*		  respective .js files, and some page brings in both files, then whichever page load takes precedence - one is going 
+*		  to write directly over the other, and it will be as if that code never loaded. The solution: make sure you don't use
+*		  global variables , and the simplest way to do that is to tuck all of yours away neatly inside an object literal.
+*
+*		* A subset of the object literal has been dubbed JavaScript Object Notation, better known as JSON. JSON is one of the most
+*		  common data formats for Ajax, and as such, you're likely to see a lot of it when you start working with Ajax.
+*		
+*		* Like everything else, programming languages have styles that go in and out of fashion. JavaScript itself is on its second
+*		  upswing, and as part of the renewed interest in scripting, the current trend is towards increased use of object literals,
+*		  so it helps to get used to seeing them.
+*
+*********************************************************************************************************************
+*	JAVASCRIPT'S INCONSISTENT HANDLING OF TIME
+*		
+*	JavaScript begins numbering at zero in most cases, so numbering begins with 0, 1, 2, 3, etc. But this isn't consistent with 
+*	dates, which begin with the number 1. So if you have an array that deals with the days of the week, you'll have this:
+*
+*	Sunday = 0
+*	Monday = 1
+*	Tuesday = 2
+*	Wednesday = 3
+*	Thursday = 4
+*	Friday = 5
+*	Saturday = 6
+*
+*	In much the same way, the 12 months of the year are number from 0 to 11.
+*
+*	On the other hand, when you're dealing with the date of the month, it makes no sense to start at zero, so JavaScript starts at 1.
+*
+*	Hours are dealt with from 0 (midnight) to 23 (11PM), using a 24-hour clock. later in Ch. 12, we'll show how to convert from a 
+*	24-hour clock to a 12-hour clock.
+*
+*********************************************************************************************************************
+*	MORE WEIRD TIME STUFF (p. 307)
+*	
+*	Month numbering in JavaScript begins with 0 and day numbering with 1, and JavaScript deals inconsistently with years prior to 1970,
+*	depending on the version of JavaScript your browser is using.
+*
+*	Recommend that you use getFullYear() anytime you know that you'll be working with version 4 and later browsers.
+*
+*********************************************************************************************************************
+*	DATE METHODS
+*
+*	METHOD				DESCRIPTION											RETURNED VALUES							SUPPORTING BROWSERS
+*
+*	getDate()			The day of the month									1-31								JavaScript 1.0
+*	getUTCDate()																									JavaScript 1.2
+*
+*	getDay()			The integer value of the day of the week				0-6									JavaScript 1.2
+*	getUTCDay()																										JavaScript 1.2
+*
+*	getFullYear()		The full four-digit year								1900+								JavaScript 1.2
+*	getUTCFullYear()	
+*
+*	getHours()			The integer hour of the day								0-23								JavaScript 1.0
+*	getUTCHours()																									JavaScript 1.2
+*
+*	getMilliseconds()	The number of milliseconds since the last second		0-999								JavaScript 1.2
+*	getUTCMilliseconds()
+*
+*	getMinutes()		The number of minutes sine the last hour				0-59								JavaScript 1.0
+*	getUTCMinutes()																									JavaScript 1.2
+*
+*	getMonth()			The month of the year									0-11								JavaScript 1.0
+*	getUTCMonth()																									JavaScript 1.2
+*
+*	getSeconds()		The number of seconds since the last minute				0-59								JavaScript 1.0
+*	getUTCSeconds()																									JavaScript 1.2
+*
+*	getTime()			The number of milliseconds since midnight 1 Jan 1970										JavaScript 1.0
+*
+*	getTimezoneOffset()	The difference between local time and GMT in minutes	0-1439								JavaScript 1.0
+*
+*	getYear()			The year field of the date								0-99 for the years 1900-1999,		JavaSript 1.0
+*																				for-digit year thereafter
+*
+*	parse()				Given a date/time string, return the number of												JavaScript 1.0
+*						milliseconds since midnight 1 January 1970
+*
+*	setDate()			Set the day, given a number between 1-31				Date in milliseconds				JavaScript 1.0
+*	setUTCDate()																(as of JavaScript 1.2)				JavaScript 1.2
+*
+*	setFullYear()		Set the year, given a four-year digit					Date in milliseconds				JavaScript 1.0
+*	setUTCFullYUear()																							
+*
+*	setHours()			Set the hour, given a number between 0-23				Date in milliseconds				JavaScript 1.0
+*	setUTCHours()																(as of JavaSript 1.2)				JavaScript 1.0
+*
+*	setMilliseconds()
+*	setUTCMilliseconds()
+*
+*********************************************************************************************************************
+*	AJAX: PINNING IT DOWN
+*
+*	- Using XHTML and CSS for structure and presentation.
+*	- Display and manipulating pages using the Document Object Model.
+*	- Using the browser's XMLHttpRequest object to transfer data between the client and the server.
+*	- Using XL as the format for the data flowing between the client and server.
+*	- And finally, using JavaScript to dynamically display and interact with all of the above.
+*
+*********************************************************************************************************************
+*	readyState PROPERTY VALUES
+*
+*	VALUE			WHAT IT MEANS
+*	0				Uninitialized; object contains no data
+*	1				Loading; object is curently loading its data
+*	2				Loaded; object has finished loading its data
+*	3				Interactive; user may interact with the object even though it is not fully loaded
+*	4 				Complete; object has finished initializing
+*
+*********************************************************************************************************************
+*	GETTING YOUR DATA
+*
+*	A script can only read a file that comes from the same server as the one that the script is on itself. If a script could read anything, then tat would open up all kinds of 
+*	possible security scams and fake sites.
+*
+*	You can have a program on your server that goes out periodically, grabs an XML file, and then stores it locally. Once you've done that, your Ajax application will have no
+*	problems reading it. 
+*
+*	In the Flickr example, it is assumed taht you've got something running that grabs the Flickr data file of your choice periodically and saves it on your server.
+*
+*	You can (in some cases) use a script that's hosted by the destination server itself-which can then read its own files, and report the results back to you.
+*
+*********************************************************************************************************************
+*	CONTAINER TYPES
+*
+*	Module: can appear anywhere on your page, and the user treats it as a single unit (if you allow it to be manipulated)
+*	Overlay: extension of module that floats above the document's inline content and doesn't affect the flow of text & images on the page.
+*	Tooltip: creates small floating boxes similar to the ones that provide contextual help in operating systems like Windows and MAC OS X.
+*	Panel: mimics an operating system window.
+*	Dialog: creates a standard dialog that can look like a system dialog.
+*	Simple Dialog: behaves like an operating system alert, with dual choices (yes/no, ok/cancel, etc).
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*********************************************************************************************************************-->

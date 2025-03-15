@@ -1,0 +1,68 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Ch7: Working with Ajax the Standard Way | jQuery Visual Start Guide</title>
+<!-- <script type="text/javascript" src="../js/jquery-1.4.2.js"></script> -->
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"> </script>
+<script type="text/javascript">
+      var XMLHttpRequestObject = false; 
+
+      if (window.XMLHttpRequest) {
+        XMLHttpRequestObject = new XMLHttpRequest();
+      } else if (window.ActiveXObject) {
+        XMLHttpRequestObject = new 
+          ActiveXObject("Microsoft.XMLHTTP");
+      }
+
+      function getData(dataSource, divID) 
+      { 
+        if(XMLHttpRequestObject) {
+          var obj = document.getElementById(divID); 
+          XMLHttpRequestObject.open("GET", dataSource); 
+
+          XMLHttpRequestObject.onreadystatechange = function() 
+          { 
+            if (XMLHttpRequestObject.readyState == 4 && 
+              XMLHttpRequestObject.status == 200) { 
+                obj.innerHTML = XMLHttpRequestObject.responseText; 
+            } 
+          } 
+
+          XMLHttpRequestObject.send(null); 
+        }
+      }
+</script>
+<style type="text/css">
+</style>
+</head>
+<body>
+	<h1>An Ajax Example</h1>
+	    <form>
+		      <input type="button" value="Fetch the message" onclick="getData('message.txt', 'targetDiv')" /> 
+	    </form>	
+		<div id="targetDiv">
+			<p>The fetched message will appear here.</p>
+		</div>
+</body>
+</html>
+<!-- 
+About Ajax
+Coding Ajax yourself involves a lot of JavaScript
+	1 - Create an XMLHttpRequest object, which is the foundation of Ajax work in browsers
+	2 - Configure that object with any data you want to send to the server and set up
+	3 - Attach a callback function to the object to read the server's response
+	4 - Connect to the server with the object's send() function
+	5 - Interpret the response to make sure there was no error and extract the data sent to the browser from the XMLHttpRequest object
+
+
+Standard Way to use Ajax
+	1 - Put Ajax to work with the do-it-yourself way (without jQuery) to download a message from the server.
+	2 - The message will be in a file, message.txt which contains the word "Hello".
+	3 - When the message is downloaded, it will be displayed.
+
+
+After using Ajax the standard way, you'll see how to work with it the easy way, jQuery.
+
+EX: Click button, which makes the page download message.txt and display the message.
+-->

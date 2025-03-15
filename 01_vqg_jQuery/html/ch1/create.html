@@ -1,0 +1,34 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Ch1: Creating New HTML Elements | jQuery Visual Start Guide</title>
+<!-- <script type="text/javascript" src="../js/jquery-1.4.2.js"></script> -->
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"> </script>
+<script type="text/javascript">
+$(function() {
+	$("<p>And here's another one!</p>").insertAfter("#first");
+	$("<p>And me too!</p>").insertAfter("#first");
+	$("<p>Me too!</p>").insertAfter("#first");
+	$("<p>I'm a new &lt;p&gt; element!</p>").insertAfter("#first");
+});
+</script>
+<style type="text/css">
+</style>
+</head>
+<body>
+<h1>Creating new elements</h1>
+<p id="first">A new element is coming up...</p>
+</body>
+</html>
+<!-- 
+pass a text string that spells out a new HTML element to the $() function:
+$("<p>And here's another one!</p>")
+
+to actually get the new element into a page, you have to use a function:
+insertAfter()
+
+to insert HTML before another page element use function:
+insertBefore()
+
+-->

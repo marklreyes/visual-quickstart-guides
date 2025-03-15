@@ -1,0 +1,71 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Ch9: Adding Tabs to a Tabs Widget | jQuery Visual Start Guide</title>
+
+<!-- CSS User Interface (UI) stylesheet-->
+<link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css" rel="stylesheet" type="text/css"/>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>	
+	
+<script type="text/javascript">
+  $(document).ready(function(){
+    $("#tabs").tabs();
+  });
+  
+/*   add tabs */
+  function add() {
+ 	$('#tabs').tabs('add','#fragment-4', 'Item four');
+  }
+</script>
+
+</head>
+<body style="font-size:65%;">
+    <h1>Adding tabs</h1>
+<div id="tabs">
+    <ul>
+        <li><a href="#fragment-1"><span>Item one</span></a></li>
+        <li><a href="#fragment-2"><span>Item two</span></a></li>
+        <li><a href="#fragment-3"><span>Item three</span></a></li>
+    </ul>
+    <div id="fragment-1">
+        <p>This is tab one.</p>
+    </div>
+    <div id="fragment-2">
+        <p>This is tab two.</p>
+    </div>
+    <div id="fragment-3">
+        <p>This is tab three.</p>
+    </div>
+</div>
+<form>
+<input type="button" value="Add tab" 
+onclick="add()"></input>
+</form>
+<div id="results">
+</div>
+<div style="visibility:hidden">
+  <ul>
+        <li><a href="#fragment-4"><span>Item three</span></a></li>
+    </ul>
+    <div id="fragment-4">
+        <p>This is tab four.</p>
+    </div>
+</div>
+</body>
+</html>
+<!-- 
+You can also add new tabs to a tabs widget. 
+This example does just that when a user clicks a button.
+
+jQuery widgets:
+	accordion
+	datepicker
+	dialog
+	progressbar
+	slider
+	tabs
+	
+check for new source code from, http://docs.jquery.com/UI/Tabs
+-->

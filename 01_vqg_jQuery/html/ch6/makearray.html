@@ -1,0 +1,35 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Ch6: Creating Arrays | jQuery Visual Start Guide</title>
+<!-- <script type="text/javascript" src="../js/jquery-1.4.2.js"></script> -->
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"> </script>
+<script type="text/javascript">
+      $(document).ready(function()
+      {
+    
+        var array = jQuery.makeArray(document.getElementsByTagName("p"));
+        array.reverse(); 
+        $(array).appendTo(document.body);
+      });
+</script>
+<style type="text/css">
+</style>
+</head>
+<body>
+<h1>Creating an array</h1>
+<p>Now</p>
+<p>is</p>
+<p>the</p>
+<p>time</p>
+</body>
+</html>
+<!-- 
+JavaScript is full of all kinds of collections: lists, maps, named node maps, and more.
+Convert such objects into standard JavaScript arrays with $.makeArray() function
+Arrays are usually much easier to deal with than collections
+
+EX: Convert the list of elements returned by the JavaScript getElementsId() into an array
+	Reverse the array and display the resulting ordered elements in a page
+-->

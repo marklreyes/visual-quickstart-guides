@@ -1,0 +1,42 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Ch6: Searching an Array | jQuery Visual Start Guide</title>
+<!-- <script type="text/javascript" src="../js/jquery-1.4.2.js"></script> -->
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"> </script>
+<script type="text/javascript">
+      $(document).ready(function()
+      {
+    
+        var array = ["strawberry", "vanilla", "chocolate", "banana"];
+
+        $("span:eq(0)").text($.inArray("banana", array));
+        $("span:eq(1)").text($.inArray("strawberry", array));
+        $("span:eq(2)").text($.inArray("tangerine", array));
+      });
+</script>
+<style type="text/css">
+</style>
+</head>
+<body>
+	<h1>Searching an array</h1>
+		<div>"banana" is at index<span></span></div>
+		<div>"strawberry" is at index<span></span></div>
+		<div>"tangerine" is at index<span></span></div>
+</body>
+</html>
+<!-- 
+$.inArray() function: let's you search an array for particular elements
+
+	How you use the function:
+
+	$.inArray(searchTerm, array))
+			searchTerm, is the term you're searching for - like a string or a number
+			array, is the array you're searching
+			
+			This function returns the 0-based index value 
+			in the array at which the first match on the 
+			search term was found, or -1 if the search 
+			term is not in the array
+-->

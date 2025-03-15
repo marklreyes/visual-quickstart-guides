@@ -1,0 +1,39 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Ch1: Running Code When a Page Is Ready | jQuery Visual Start Guide</title>
+<!-- <script type="text/javascript" src="../js/jquery-1.4.2.js"></script> -->
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"> </script>
+<script type="text/javascript">
+$(function() {
+	$("p.second")
+		.addClass("striped");
+	});
+</script>
+<style type="text/css">
+p.second {
+	font-weight: normal;
+	}
+p.striped {
+	background-color: cyan;
+	}	
+</style>
+</head>
+<body>
+<h1>Running code when a page is ready</h1>
+<div>
+<p>This is paragraph 1.</p>
+<p class="second">This is paragraph 2.</p>
+<p>This is paragraph 3.</p>
+<p>This is paragraph 4.</p>
+</div>
+</body>
+</html>
+<!-- 
+add a style class to a p element and the style is applied once the page loads
+run code when the page is ready:
+	$(document).ready(function(){
+
+	});
+-->

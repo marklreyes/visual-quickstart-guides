@@ -1,0 +1,44 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Ch6: Eliminating Duplicate Elements from Arrays | jQuery Visual Start Guide</title>
+<!-- <script type="text/javascript" src="../js/jquery-1.4.2.js"></script> -->
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"> </script>
+<script type="text/javascript">
+      $(document).ready(function(){
+    
+        var array = $("p").get();
+
+        array = array.concat($(".duplicateMe").get());
+        $("p:eq(1)").text("There are " + array.length + " elements.");
+
+        array = jQuery.unique(array);
+        $("p:eq(2)").text("There are " + array.length + " unique elements.");
+
+      });
+</script>
+<style type="text/css">
+</style>
+</head>
+<body>
+	<h1>Eliminating duplicate elements</h1>
+		<p class="duplicateMe"></p>
+		<p class="duplicateMe"></p>
+		<p class="duplicateMe"></p>
+		<p></p>
+</body>
+</html>
+<!-- 
+#.unique() function removes duplicate elements from an array.
+#.unique() function only removes elements that are page elements, not standard array elements such as strings and numbers
+
+	The reason for this limitation is that jQuery's mission 
+	is more to let you work with the elements in a page than 
+	to provide general utility functions that work on general arrays.
+
+Use $.unique() when you have a set of page elements and want to weed out the duplicates before working with them.
+
+EX: put $.unique() to work now with some p elements, some of which are duplicates.
+	Should display the total number of p elements in the array and then the number of unique p elements.
+-->

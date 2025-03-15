@@ -1,0 +1,42 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Ch5: Creating Custom Animation | jQuery Visual Start Guide</title>
+<!-- <script type="text/javascript" src="../js/jquery-1.4.2.js"></script> -->
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"> </script>
+<script type="text/javascript">
+	function animator() {
+		$("#target").animate({
+			width: "80%", opacity: 0.333, fontSize: "26pt", marginLeft: "0.5in", borderWidth: "15px"}, 2000);
+	}
+</script>
+<style type="text/css">
+	div {
+		background-color: cyan;
+		width: 100px;
+		border: 1px solid blue;
+	}
+</style>
+</head>
+<body>
+<h1>Creating custom animation</h1>
+	<div id="target">
+		Expand me
+	</div>
+<br />
+<button onclick="animator()">Animate</button>
+</body>
+</html>
+<!-- 
+create custom animation in jQuery with, animate() function
+
+animate(params, duration, easing, callback)
+
+	params: contains the final properties of the object you're animating, such as CSS.
+	duration: optional time in milliseconds that the animation should take
+	easing: optional easing function (which can determine how the animation progresses)
+	callback: optional callback function
+	
+EX: animate a <div> tag, expanding it when a user clicks a button
+-->

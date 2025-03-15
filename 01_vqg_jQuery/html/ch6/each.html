@@ -1,0 +1,63 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Ch6: Looping over Object Members with $.each() | jQuery Visual Start Guide</title>
+<!-- <script type="text/javascript" src="../js/jquery-1.4.2.js"></script> -->
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"> </script>
+<script type="text/javascript">
+	$(document).ready(function() {
+		var obj = { one:1, two:2, three:3, four:4, five:5 };
+
+	$.each(obj, function(i, val) {
+		$("#" + i).append(document.createTextNode("Property " + i + " contains " + val));
+		});
+	});
+</script>
+<style type="text/css">
+</style>
+</head>
+<body>
+<h1>Looping over an object with $.each()</h1>
+<div id="one"></div>
+<div id="two"></div>
+<div id="three"></div>
+<div id="four"></div>
+<div id="five"></div>
+</body>
+</html>
+<!-- 
+	jQuery has a handy utility function that lets you loop over the members of a JavaScript object.
+	
+	The $.each() function automaticlaly loops over all members of an object for you. For example,
+	
+						$.each(obj, function(i, val) {
+						}
+						
+						i: current object member by name
+						val: value of current object member name
+	
+	Using $.each() saves you from having to know the name of each object member to access it
+	Using $.each() you can loop over every member automatically
+	
+	EX: create a JavaScript object and then loop over all its memebers, displaying those members and their values.
+-->
+
+<!-- 
+	Examples of jQuery Utility Functions
+		$.isArray() function: 
+			pass this function an array, and it returns true if the object you passed is an array
+		
+		$.makeArray() function: 
+			create new arrays
+		
+		$.unique() function: 
+			get the unique members of an array
+		
+		$.each() function: 
+			mimcs the popular each loop - it lets you loop over all the members of an object (such as an array) automatically-you don't need to set a loop index yourself
+		
+		$.support() function:
+			lets you check whether various browser features are available in the browser that the user is using. 
+-->
+

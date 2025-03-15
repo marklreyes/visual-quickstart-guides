@@ -1,0 +1,39 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Ch3: Inserting Elements | jQuery Visual Start Guide</title>
+<!-- <script type="text/javascript" src="../js/jquery-1.4.2.js"></script> -->
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"> </script>
+<script type="text/javascript">
+	function inserter(){
+		$("#target").before("<p>This is paragraph 1.5</p>");
+		$("#target").after("<p>This is paragraph 2.5</p>");
+	}
+</script>
+<style type="text/css">
+</style>
+</head>
+<body>
+<h1>Inserting Elements</h1>
+<p>This is paragraph 1.</p>
+<p id="target">This is paragraph 2.</p>
+<p id="source">This is paragraph 3.</p>
+<p>This is paragraph 4.</p>
+<br />
+<form>
+	<input type="button" value="Insert new paragraphs" onclick="inserter()" />
+</form>
+</body>
+</html>
+<!-- 
+use the append() function to append elements to other elements and even move them around in a page.
+use the before() and after() functions to insert elements with finer control.
+
+example, add a new p element before an element with the id 'target' use:
+	$("#target").before("<p>New Element</p>");
+	
+example, add a new p element after an element with the id 'target' use:
+	$(#target).after("<p>New Element</p>");
+
+-->

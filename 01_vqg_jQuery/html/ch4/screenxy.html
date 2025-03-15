@@ -1,0 +1,38 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Ch4: Getting Mouse Coordinates | jQuery Visual Start Guide</title>
+<!-- <script type="text/javascript" src="../js/jquery-1.4.2.js"></script> -->
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"> </script>
+<script type="text/javascript">
+	$(function() {
+		$('#target').bind('click', clicker);
+	});
+	
+	function clicker(event) {
+		$('#p1').text('(screenX, screenY) = (' + event.screenX + ', ' + event.screenY + ')');
+		$('#p2').text('(pageX, pageY) = (' + event.pageX + ', ' + event.pageY + ')');
+	}
+</script>
+<style type="text/css">
+</style>
+</head>
+<body>
+<h1>Binding event handlers to events</h1>
+<img id="target" src="../../images/image1.jpg" /> 
+<p id="p1"></p>
+<p id="p2"></p>
+</body>
+</html>
+<!-- 
+Mouse event properties come with built-in properties that let you determine exactly where the vent occured.
+
+Get the page coordinates of the mouse event with respect to the upper-left corner of the client area using:
+	pageX, pageY properties
+	these properties are X and Y coordinates relative to the upper-left corner of the client area, which is (0,0)
+	
+Get the mouse location with respect to the upper-left corner of the screen using:
+	screenX and screenY properties
+
+-->

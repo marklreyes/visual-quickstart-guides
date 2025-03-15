@@ -1,0 +1,732 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<!--*****************************************************************************************************************
+ *	JavaScript & Ajax Visual QuickStart Guide
+ *	Author:	 Tom Negrino, Dori Smith
+ *	Publisher:	 Peachpit Press, 2009
+ *	Report Errors:	 errata@peachpit.com
+ *  
+ *	Edited:	Mark Reyes [ Mark (dot) Reyes (at) am (dot) sony (dot) com ]
+ *	Date:	02.28.11	
+ *	
+ *
+ *	Original source code can be found in '_references' folder if starting at this page, index.html
+ *	A majority of dev notes/documentation are commented in the js files of each exercise
+ *
+ *	
+*********************************************************************************************************************-->
+
+<title>JavaScript & Ajax Visual QuickStart Guide</title>
+
+<link type="text/css" href="css/format.css" rel="stylesheet"/>
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+<script type="text/javascript">	
+$(document).ready(function() {
+	//ensure the content block is closed on initial load
+	$('.content').slideUp("fast");
+	
+	
+});	
+</script>
+</head>
+<body>
+<h1><span class="blueText">JavaScript & Ajax</span> Visual QuickStart Guide</h1>
+
+<!-- intro -->
+<div id="introBlock" class="">
+	<p>
+		JavaScript is a programming language that you can use to add interactivity to your Web pages. 
+		JavaScript lets you create an active user interface, giving the users feedback as they navigate 
+		your pages. You can use JavaScript to make sure that your users enter valid information in forms, 
+		which can save your business time and money. With JavaScript you have the ability create customized 
+		Web pages, depending on actions that the user takes. 	
+	</p>
+	<p>
+		JavaScript controls the browser, so you can open up new windows, display alert boxes, and put custom 
+		messages in the status bar of the browser window. You can also use JavaScript to deal with forms, set 
+		cookies, build HTML pages on the fly, and create Web-based applications.
+	</p>
+</div><!--/intro -->
+
+<!-- ch1 -->
+<div class="chapterBlocks">
+<h2>Ch1: Getting Acquainted with JavaScript</h2>
+	<!--articleParagraph -->	
+	<p class="articleParagraph">
+		JavaScript is a programming language that you can use to add interactivity to your Web pages.
+	</p>
+	<!--/articleParagraph -->	
+		<!-- content list -->
+		<div id="chapter1" class="content">
+		<ul>
+			<li><a href="html/ch1/script01.html">What JavaScript Is</a></li>
+		</ul>
+		</div><!-- /content list -->
+		<!-- button -->
+		<div class="onOffButton">		
+			<script type="text/javascript">
+				function slideup1() {
+					$('#chapter1').slideUp("slow");
+				}
+				function slidedown1() {
+					$('#chapter1').slideDown("slow");
+				}
+			</script>
+		<form>
+			<input type="button" value="open chapter" onclick="slidedown1()" />
+			<input type="button" value="close chapter" onclick="slideup1()" />
+		</form>
+		</div><!-- /button -->
+</div><!-- /ch1 -->
+
+<!-- ch2 -->
+<div class="chapterBlocks">
+<h2>Ch2: Start Me Up!</h2>
+	<!--articleParagraph -->	
+	<p class="articleParagraph">
+		You'll learn where to put your scripts in your HTML, how you can leave comments in your scripts 
+		so you can more easily understand them at a later time, and how you can use scripts to communicate 
+		with the user. You'll also see how to make the page automatically change to another page (called redirection).
+	</p>
+	<!--/articleParagraph -->	
+		<!-- content list -->
+		<div id="chapter2" class="content">
+		<ul>
+			<li><a href="html/ch2/script01.html">Where to Put Your Scripts</a></li>
+			<li><a href="html/ch2/script02.html">Using External Scripts</a></li>
+			<li><a href="html/ch2/script03.html">Putting Comments in Scripts</a></li>
+			<li><a href="html/ch2/script04.html">Alerting the User</a></li>
+			<li><a href="html/ch2/script05.html">Confirming a User's Choice</a></li>
+			<li><a href="html/ch2/script06.html">Prompting the User</a></li>
+			<li><a href="html/ch2/script07.html">Redirecting the User with a Link</a></li>
+			<li><a href="html/ch2/script08.html">Using JavaScript to Enhance Links</a></li>
+			<li><a href="html/ch2/script09.html">Using Multi-Level Conditionals</a></li>
+			<li><a href="html/ch2/script10.html">Handling Errors</a></li>
+		</ul>
+		</div><!-- /content list -->
+		<!-- button -->
+		<div class="onOffButton">		
+			<script type="text/javascript">
+				function slideup2() {
+					$('#chapter2').slideUp("slow");
+				}
+				function slidedown2() {
+					$('#chapter2').slideDown("slow");
+				}
+			</script>
+		<form>
+			<input type="button" value="open chapter" onclick="slidedown2()" />
+			<input type="button" value="close chapter" onclick="slideup2()" />
+		</form>
+		</div><!-- /button -->
+</div><!-- /ch2 -->
+
+<!-- ch3 -->
+<div class="chapterBlocks">
+<h2>Ch3: Your First Web App</h2>
+	<!--articleParagraph -->	
+	<p class="articleParagraph">
+		In this chapter we'll go into more detail about the basic elements of JavaScript and introduce
+		you to other aspects of the JavaScript language: loops, arrays, and more about functions. You'll see
+		how you can use JavaScript to write your Web pages for you, learn how JavaScript handles errors that 
+		the user makes, and more.
+	</p>
+	<!--/articleParagraph -->	
+		<!-- content list -->
+		<div id="chapter3" class="content">
+		<ul>
+			<li><a href="html/ch3/script01.html">Around and Around with Loops</a></li>
+			<li><a href="html/ch3/script02.html">Passing a Value to a Function</a></li>
+			<li><a href="html/ch3/script03.html">Detecting Objects</a></li>
+			<li><a href="html/ch3/script04.html">Working with Arrays</a></li>
+			<li><a href="html/ch3/script05.html">Working with Functions That Return Values</a></li>
+			<li><a href="html/ch3/script06.html">Updating Arrays</a></li>
+			<li><a href="html/ch3/script07.html">Using Do/While Loops</a></li>
+			<li><a href="html/ch3/script08.html">Calling Scripts Multiple Ways</a></li>
+			<li><a href="html/ch3/script09.html">Combining JavaScript and CSS</a></li>
+			<li><a href="html/ch3/script10.html">Checking State</a></li>
+			<li><a href="html/ch3/script11.html">Working with String Arrays</a></li>
+		</ul>
+		</div><!-- /content list -->
+		<!-- button -->
+		<div class="onOffButton">		
+			<script type="text/javascript">
+				function slideup3() {
+					$('#chapter3').slideUp("slow");
+				}
+				function slidedown3() {
+					$('#chapter3').slideDown("slow");
+				}
+			</script>
+		<form>
+			<input type="button" value="open chapter" onclick="slidedown3()" />
+			<input type="button" value="close chapter" onclick="slideup3()" />
+		</form>
+		</div><!-- /button -->
+</div><!-- /ch3 -->
+
+<!-- ch4 -->
+<div class="chapterBlocks">
+<h2>Ch4: Working with Images</h2>
+	<!--articleParagraph -->	
+	<p class="articleParagraph">
+		Rollovers are a great tool, but you can do much more than rollovers with JavaScript, 
+		such as automatically change images, create ad banners, build slideshows, and display 
+		random images on a page.
+	</p>
+	<!--/articleParagraph -->	
+		<!-- content list -->
+		<div id="chapter4" class="content">
+		<ul>
+			<li><a href="html/ch4/script01.html">Creating Rollovers</a></li>
+			<li><a href="html/ch4/script02.html">Creating More Effective Rollovers</a></li>
+			<li><a href="html/ch4/script03.html">Building Three-State Rollovers</a></li>
+			<li><a href="html/ch4/script04.html">Triggering Rollovers from a Link</a></li>
+			<li><a href="html/ch4/script05.html">Make Multiple Links Change a Single Rollover</a></li>
+			<li><a href="html/ch4/script06.html">Working with Multiple Rollovers</a></li>
+			<li><a href="html/ch4/script07.html">Creating Cycling Banners</a></li>
+			<li><a href="html/ch4/script08.html">Adding Links to Cycling Banners</a></li>
+			<li><a href="html/ch4/script09.html">Building Wraparound Slideshows</a></li>
+			<li><a href="html/ch4/script10.html">Displaying a Random Image</a></li>
+			<li><a href="html/ch4/script11.html">Cycling Images with a Random Start</a></li>
+		</ul>
+		</div><!-- /content list -->
+		<!-- button -->
+		<div class="onOffButton">		
+			<script type="text/javascript">
+				function slideup4() {
+					$('#chapter4').slideUp("slow");
+				}
+				function slidedown4() {
+					$('#chapter4').slideDown("slow");
+				}
+			</script>
+		<form>
+			<input type="button" value="open chapter" onclick="slidedown4()" />
+			<input type="button" value="close chapter" onclick="slideup4()" />
+		</form>
+		</div><!-- /button -->
+</div><!-- /ch4 -->
+
+<!-- ch5 -->
+<div class="chapterBlocks">
+<h2>Ch5: Frames, Frames, and More Frames</h2>
+	<!--articleParagraph -->	
+	<p class="articleParagraph">
+		We'll demonstrate how to harness the power of JavaScript to make frames even more useful.
+		A frame consists of at least three pages of HTML: the first is frameset aka the top or parent, 
+		the remainder of the pages fit into the panes that the frameset has created and are the child pages.
+	</p>
+	<!--/articleParagraph -->	
+		<!-- content list -->
+		<div id="chapter5" class="content">
+		<ul>
+			<li><a href="html/ch5/frame1.html">Keeping a Page out of a Frame</a></li>
+			<li><a href="html/ch5/frame2.html">Forcing a Page into a Frame</a></li>
+			<li><a href="html/ch5/frameset3.html">Forcing a Site into a Frame</a></li>
+			<li><a href="html/ch5/left4.html">Setting a Target</a></li>
+			<li><a href="html/ch5/frameset5.html">Creating and Loading a Dynamic Frame</a></li>
+			<li><a href="html/ch5/frameset6.html">Sharing Functions between Frames</a></li>
+			<li><a href="html/ch5/frameset7.html">Loading Multiple Frames at Once</a></li>
+			<li><a href="html/ch5/frame8.html">Working with Iframes</a></li>
+			<li><a href="html/ch5/frame9.html">Loading Iframes with JavaScript</a></li>
+		</ul>
+		</div><!-- /content list -->
+		<!-- button -->
+		<div class="onOffButton">		
+			<script type="text/javascript">
+				function slideup5() {
+					$('#chapter5').slideUp("slow");
+				}
+				function slidedown5() {
+					$('#chapter5').slideDown("slow");
+				}
+			</script>
+		<form>
+			<input type="button" value="open chapter" onclick="slidedown5()" />
+			<input type="button" value="close chapter" onclick="slideup5()" />
+		</form>
+		</div><!-- /button -->
+</div><!-- /ch5 -->
+
+
+<!-- ch6 -->
+<div class="chapterBlocks">
+<h2>Ch6: Working with Windows</h2>
+	<!--articleParagraph -->	
+	<p class="articleParagraph">
+		In this chapter, you'll learn how to use JavaScript to open and close, 
+		update, and position windows. You'll see how you can use JavaScript to 
+		write information into windows, so you can build a Web page on the fly.
+	</p>
+	<!--/articleParagraph -->	
+		<!-- content list -->
+		<div id="chapter6" class="content">
+		<ul>
+			<li><a href="html/ch6/script01.html">Opening a New Window</a></li>
+			<li><a href="html/ch6/script02.html">Loading Different Contents into a Window</a></li>
+			<li><a href="html/ch6/script03.html">Opening Multiple Windows</a></li>
+			<li><a href="html/ch6/script04.html">Updating One Window from Another</a></li>
+			<li><a href="html/ch6/script05.html">Closing a Window</a></li>
+			<li><a href="html/ch6/script06.html">Putting Windows in Their Place</a></li>
+		</ul>
+		</div><!-- /content list -->
+		<!-- button -->
+		<div class="onOffButton">		
+			<script type="text/javascript">
+				function slideup6() {
+					$('#chapter6').slideUp("slow");
+				}
+				function slidedown6() {
+					$('#chapter6').slideDown("slow");
+				}
+			</script>
+		<form>
+			<input type="button" value="open chapter" onclick="slidedown6()" />
+			<input type="button" value="close chapter" onclick="slideup6()" />
+		</form>
+		</div><!-- /button -->
+</div><!-- /ch6 -->
+
+<!-- ch7 -->
+<div class="chapterBlocks">
+<h2>Ch7: Form Handling</h2>
+	<!--articleParagraph -->	
+	<p class="articleParagraph">
+		In this chapter, you'll learn how to use JavaScript make sure that your 
+		forms contain valid information, check data in one field against the data 
+		in another field, and highlight incorrect information to let the user know 
+		what needs to be changed.
+	</p>
+	<!--/articleParagraph -->	
+		<!-- content list -->
+		<div id="chapter7" class="content">
+		<ul>
+			<li><a href="html/ch7/script01.html">Select-and-Go Navigation</a></li>
+			<li><a href="html/ch7/script02.html">Changing Menus Dynamically</a></li>
+			<li><a href="html/ch7/script03.html">Making Fields Required</a></li>
+			<li><a href="html/ch7/script04.html">Checking Fields against Each Other</a></li>
+			<li><a href="html/ch7/script05.html">Identifying Problem Fields</a></li>
+			<li><a href="html/ch7/script06.html">Putting Form Validation into Action</a></li>
+			<li><a href="html/ch7/script07.html">Working with Radio Buttons</a></li>
+			<li><a href="html/ch7/script08.html">Setting One Field with Another</a></li>
+			<li><a href="html/ch7/script09.html">Validating Zip Codes</a></li>
+			<li><a href="html/ch7/script10.html">Validating Email Addresses</a></li>
+		</ul>
+		</div><!-- /content list -->
+		<!-- button -->
+		<div class="onOffButton">		
+			<script type="text/javascript">
+				function slideup7() {
+					$('#chapter7').slideUp("slow");
+				}
+				function slidedown7() {
+					$('#chapter7').slideDown("slow");
+				}
+			</script>
+		<form>
+			<input type="button" value="open chapter" onclick="slidedown7()" />
+			<input type="button" value="close chapter" onclick="slideup7()" />
+		</form>
+		</div><!-- /button -->
+</div><!-- /ch7 -->
+
+<!-- ch8 -->
+<div class="chapterBlocks">
+<h2>Ch8: Forms and Regular Expressions</h2>
+	<!--articleParagraph -->	
+	<p class="articleParagraph">
+		There are many regular expression operators, and we'll look at the most common in this chapter. 
+		By learning and using these operators, you'll be able to save yourself a huge amount of effort 
+		whenever you need to detect and manipulate text strings.
+	</p>
+	<!--/articleParagraph -->	
+		<!-- content list -->
+		<div id="chapter8" class="content">
+		<ul>
+			<li><a href="html/ch8/script01.html">Validating an Email Address with Regular Expressions</a></li>
+			<li><a href="html/ch8/script02.html">Validating a File Name</a></li>
+			<li><a href="html/ch8/script03.html">Extracting Strings</a></li>
+			<li><a href="html/ch8/script04.html">Formatting Strings</a></li>
+			<li><a href="html/ch8/script05.html">Formatting and Sorting Strings</a></li>
+			<li><a href="html/ch8/script06.html">Formatting and Validating Strings</a></li>
+			<li><a href="html/ch8/script07.html">Replacing Elements using Regular Expressions</a></li>			
+		</ul>
+		</div><!-- /content list -->
+		<!-- button -->
+		<div class="onOffButton">		
+			<script type="text/javascript">
+				function slideup8() {
+					$('#chapter8').slideUp("slow");
+				}
+				function slidedown8() {
+					$('#chapter8').slideDown("slow");
+				}
+			</script>
+		<form>
+			<input type="button" value="open chapter" onclick="slidedown8()" />
+			<input type="button" value="close chapter" onclick="slideup8()" />
+		</form>
+		</div><!-- /button -->
+</div><!-- /ch8 -->
+
+<!-- ch9 -->
+<div class="chapterBlocks">
+<h2>Ch9: Handling Events</h2>
+	<!--articleParagraph -->	
+	<p class="articleParagraph">
+		In this chapter, you'll see how to use event handlers to work with windows, capture mouse movements 
+		and clicks, deal with form events, and react when the user presses keys on the keyboard.
+	</p>
+	<!--/articleParagraph -->	
+		<!-- content list -->
+		<div id="chapter9" class="content">
+		<ul>
+			<li><a href="html/ch9/script01.html">The onload event</a></li>		
+			<li><a href="html/ch9/script02.html">The onresize event</a></li>	
+			<li><a href="html/ch9/script03.html">The onfocus event</a></li>	
+			<li><a href="html/ch9/script04.html">The onblur event</a></li>		
+			<li><a href="html/ch9/script05.html">The onmousedown event</a></li>		
+			<li><a href="html/ch9/script06.html">The onmousemove event</a></li>		
+			<li><a href="html/ch9/script07.html">The ondblclick event</a></li>		
+			<li><a href="html/ch9/script08.html">The onblur event</a></li>		
+			<li><a href="html/ch9/script09.html">The onfocus event</a></li>		
+			<li><a href="html/ch9/script10.html">The onkeydown event</a></li>		
+		</ul>
+		</div><!-- /content list -->
+		<!-- button -->
+		<div class="onOffButton">		
+			<script type="text/javascript">
+				function slideup9() {
+					$('#chapter9').slideUp("slow");
+				}
+				function slidedown9() {
+					$('#chapter9').slideDown("slow");
+				}
+			</script>
+		<form>
+			<input type="button" value="open chapter" onclick="slidedown9()" />
+			<input type="button" value="close chapter" onclick="slideup9()" />
+		</form>
+		</div><!-- /button -->
+</div><!-- /ch9 -->
+
+<!-- ch10 -->
+<div class="chapterBlocks">
+<h2>Ch10: JavaScript and Cookies</h2>
+	<!--articleParagraph -->	
+	<p class="articleParagraph">
+		Cookie: a unique nugget of information that a web server gives to your browser when the two first meet and which they then share 
+		with each return visit. The remote server saves its part of the cookie and the information it contains about you; your 
+		browser does the same, as a plain text file stored on your computer's hard disk.
+	</p>
+	<!--/articleParagraph -->	
+		<!-- content list -->
+		<div id="chapter10" class="content">
+		<ul>
+			<li><a href="html/ch10/script01.html">Baking Your First Cookie</a></li>	
+			<li><a href="html/ch10/script02.html">Reading a Cookie</a></li>		
+			<li><a href="html/ch10/script03.html">Showing Your Cookies</a></li>	
+			<li><a href="html/ch10/script04.html">Using Cookies as Counters</a></li>
+			<li><a href="html/ch10/script05.html">Deleting Cookies</a></li>	
+			<li><a href="html/ch10/script06.html">Handling Multiple Cookies</a></li>	
+			<li><a href="html/ch10/script07.html">Displaying "New to You" Messages</a></li>			
+		</ul>
+		</div><!-- /content list -->
+		<!-- button -->
+		<div class="onOffButton">		
+			<script type="text/javascript">
+				function slideup10() {
+					$('#chapter10').slideUp("slow");
+				}
+				function slidedown10() {
+					$('#chapter10').slideDown("slow");
+				}
+			</script>
+		<form>
+			<input type="button" value="open chapter" onclick="slidedown10()" />
+			<input type="button" value="close chapter" onclick="slideup10()" />
+		</form>
+		</div><!-- /button -->
+</div><!-- /ch10 -->
+
+<!-- ch11 -->
+<div class="chapterBlocks">
+<h2>Ch11: Objects and the DOM</h2>
+	<!--articleParagraph -->	
+	<p class="articleParagraph">
+		<em>Node manipulation</em> is the W3C-recommended way for standards-compliant browsers 
+		to support web pages that act more like applications than the standard static pages. 
+		In this chapter, you'll learn a bit more about nodes and the DOM; add, delete, and work 
+		with specific nodes; and insert and replace nodes on your pages.
+	</p>
+	<!--/articleParagraph -->	
+		<!-- content list -->
+		<div id="chapter11" class="content">
+		<ul>
+			<li><a href="html/ch11/script01.html">Adding Nodes</a></li>		
+			<li><a href="html/ch11/script02.html">Deleting Nodes</a></li>		
+			<li><a href="html/ch11/script03.html">Deleting Specific Nodes</a></li>	
+			<li><a href="html/ch11/script04.html">Inserting Nodes</a></li>
+			<li><a href="html/ch11/script05.html">Replacing Nodes</a></li>		
+			<li><a href="html/ch11/script06.html">Writing Code with Object Literals</a></li>		
+		</ul>
+		</div><!-- /content list -->
+		<!-- button -->
+		<div class="onOffButton">		
+			<script type="text/javascript">
+				function slideup11() {
+					$('#chapter11').slideUp("slow");
+				}
+				function slidedown11() {
+					$('#chapter11').slideDown("slow");
+				}
+			</script>
+		<form>
+			<input type="button" value="open chapter" onclick="slidedown11()" />
+			<input type="button" value="close chapter" onclick="slideup11()" />
+		</form>
+		</div><!-- /button -->
+</div><!-- /ch11 -->
+
+
+<!-- ch12 -->
+<div class="chapterBlocks">
+<h2>Ch12: Making Your Pages Dynamic</h2>
+	<!--articleParagraph -->	
+	<p class="articleParagraph">
+		In this chapter you'll learn how to use JavaScript to display the local date 
+		and time on your Web pages; customize a greeting by the time of day wheere your 
+		user is; convert between different time formats; and move an object across 
+		the user's page under script control.
+	</p>
+	<!--/articleParagraph -->	
+		<!-- content list -->
+		<div id="chapter12" class="content">
+		<ul>
+			<li><a href="html/ch12/script01.html">Putting the Current Date into a Web Page</a></li>	
+			<li><a href="html/ch12/script02.html">Working with Days</a></li>	
+			<li><a href="html/ch12/script03.html">Customizing a Message for the Time of Day</a></li>		
+			<li><a href="html/ch12/script04.html">Displaying Dates by Time Zone</a></li>		
+			<li><a href="html/ch12/script05.html">Converting 24-Hour to 12-Hour Time</a></li>		
+			<li><a href="html/ch12/script06.html">Creating a Countdown</a></li>			
+			<li><a href="html/ch12/script07.html">Hiding and Displaying Layers</a></li>	
+			<li><a href="html/ch12/script08.html">Moving an Object in the Document</a></li>			
+		</ul>
+		</div><!-- /content list -->
+		<!-- button -->
+		<div class="onOffButton">		
+			<script type="text/javascript">
+				function slideup12() {
+					$('#chapter12').slideUp("slow");
+				}
+				function slidedown12() {
+					$('#chapter12').slideDown("slow");
+				}
+			</script>
+		<form>
+			<input type="button" value="open chapter" onclick="slidedown12()" />
+			<input type="button" value="close chapter" onclick="slideup12()" />
+		</form>
+		</div><!-- /button -->
+</div><!-- /ch12 -->
+
+<!-- ch13 -->
+<div class="chapterBlocks">
+<h2>Ch13: Introducing AJAX</h2>
+	<!--articleParagraph -->	
+	<p class="articleParagraph">
+		In this chapter you'll learn how to request information from the server in the background and turn it 
+		into a form your Ajax application can use; automatically refresh from the server; build a cool previewing 
+		effect for objects on your page; and build an Ajax application that auto-completes form fields, just like 
+		a desktop application.
+	</p>
+	<!--/articleParagraph -->	
+		<!-- content list -->
+		<div id="chapter13" class="content">
+		<ul>
+			<li><a href="html/ch13/script01.html">Reading Server Data</a></li>	
+			<li><a href="html/ch13/script02.html">Parsing Server Data</a></li>	
+			<li><a href="html/ch13/script03.html">Refreshing Server Data</a></li>	
+			<li><a href="html/ch13/script04.html">Getting Data From a Server</a></li>	
+			<li><a href="html/ch13/script05.html">Previewing Links with Ajax</a></li>	
+			<li><a href="html/ch13/script06.html">Auto-Completing Form Fields</a></li>	
+		</ul>
+		</div><!-- /content list -->
+		<!-- button -->
+		<div class="onOffButton">		
+			<script type="text/javascript">
+				function slideup13() {
+					$('#chapter13').slideUp("slow");
+				}
+				function slidedown13() {
+					$('#chapter13').slideDown("slow");
+				}
+			</script>
+		<form>
+			<input type="button" value="open chapter" onclick="slidedown13()" />
+			<input type="button" value="close chapter" onclick="slideup13()" />
+		</form>
+		</div><!-- /button -->
+</div><!-- /ch13 -->
+
+<!-- ch14 -->
+<div class="chapterBlocks">
+<h2>Ch14: AJAX Toolkits</h2>
+	<!--articleParagraph -->	
+	<p class="articleParagraph">
+		This chapter shows you how to take advantage of <em>Ajax toolkits</em>: prewritten, already-programmed libraries of 
+		functions that make it easy for you to bring the power of Ajax to your projects. For this chapter, we're using YUI.
+		In this chapter, we'll show you how to use YUI to enable the user to drag-and-drop page elements; add calendary objects;
+		create overlays and pop-up windows; add cool animation effects to your pages; and embed a light-weight debugger right
+		in your page to help you create your applications.
+	</p>
+	<!--/articleParagraph -->	
+		<!-- content list -->
+		<div id="chapter14" class="content">
+		<ul>
+			<li><a href="html/ch14/script01.html">Dragging and Dropping Page Elements</a></li>	
+			<li><a href="html/ch14/script02.html">Adding a Calendar to Your Page</a></li>	
+			<li><a href="html/ch14/script03.html">Adding a 2-up Calendar to Your Page</a></li>	
+			<li><a href="html/ch14/script04.html">Using the Container Utility</a></li>	
+			<li><a href="html/ch14/script05.html">Adding Animation Effects</a></li>	
+			<li><a href="html/ch14/script06.html">Implementing the Logger Control for Debugging</a></li>	
+		</ul>
+		</div><!-- /content list -->
+		<!-- button -->
+		<div class="onOffButton">		
+			<script type="text/javascript">
+				function slideup14() {
+					$('#chapter14').slideUp("slow");
+				}
+				function slidedown14() {
+					$('#chapter14').slideDown("slow");
+				}
+			</script>
+		<form>
+			<input type="button" value="open chapter" onclick="slidedown14()" />
+			<input type="button" value="close chapter" onclick="slideup14()" />
+		</form>
+		</div><!-- /button -->
+</div><!-- /ch14 -->
+
+<!-- ch15 -->
+<div class="chapterBlocks">
+<h2>Ch15: Applied JavaScript</h2>
+	<!--articleParagraph -->	
+	<p class="articleParagraph">
+		The tasks you'll find here require a variety of approaches and are similar to what you'll need 
+		to do on your own Web sites. In this chapter, you'll learn to improve your site's user interface 
+		with outline-style sliding and fly-out menus; create a slideshow; process text by crunching it 
+		with JavaScript; let JavaScript do the hard work of displaying data in an easy-to-understand graphical 
+		manner; and switch between different style sheets under script control.
+	</p>
+	<!--/articleParagraph -->	
+		<!-- content list -->
+		<div id="chapter15" class="content">
+		<ul>
+			<li><a href="html/ch15/script01.html">Using Sliding Menus</a></li>	
+			<li><a href="html/ch15/script02.html">Adding Pull-Down Menus</a></li>	
+			<li><a href="html/ch15/script03.html">Enhancing Pull-Down Menus</a></li>	
+			<li><a href="html/ch15/script04.html">A Slideshow with Captions</a></li>
+			<li><a href="html/ch15/script05.html">A Silly Name Generator</a></li>	
+			<li><a href="html/ch15/script06.html">A Bar Graph Generator</a></li>	
+			<li><a href="html/ch15/script07.html">Style Sheet Switcher</a></li>	
+		</ul>
+		</div><!-- /content list -->
+		<!-- button -->
+		<div class="onOffButton">		
+			<script type="text/javascript">
+				function slideup15() {
+					$('#chapter15').slideUp("slow");
+				}
+				function slidedown15() {
+					$('#chapter15').slideDown("slow");
+				}
+			</script>
+		<form>
+			<input type="button" value="open chapter" onclick="slidedown15()" />
+			<input type="button" value="close chapter" onclick="slideup15()" />
+		</form>
+		</div><!-- /button -->
+</div><!-- /ch15 -->
+
+<!-- ch16 -->
+<div class="chapterBlocks">
+<h2>Ch16: Designing with Ajax</h2>
+	<!--articleParagraph -->	
+	<p class="articleParagraph">
+		In this chapter, we'll be talking about the Web look and feel: both how it's 
+		created and why it's used. In order to demonstrate these elements, we'll be using
+		another JavaScript library-jQuery-and you'll get a brief introduction to its 
+		advantages and uses. You'll learn how to highlight elements, create accordian-like menus,
+		and display modal dialogs (with accompanying visual effects). We'll finish off with smarter
+		tables, including both zebra-striping (for ease of reading) and sorting by any column.
+	</p>
+	<!--/articleParagraph -->	
+		<!-- content list -->
+		<div id="chapter16" class="content">
+		<ul>
+			<li><a href="html/ch16/script01.html">Highlighting New Elements</a></li>	
+			<li><a href="html/ch16/script02.html">Creating Accordion Menus</a></li>	
+			<li><a href="html/ch16/script03.html">Creating Smarter Dialogs</a></li>	
+			<li><a href="html/ch16/script04.html">Stripping Tables</a></li>	
+			<li><a href="html/ch16/script05.html">Sorting Tables</a></li>	
+		</ul>
+		</div><!-- /content list -->
+		<!-- button -->
+		<div class="onOffButton">		
+			<script type="text/javascript">
+				function slideup16() {
+					$('#chapter16').slideUp("slow");
+				}
+				function slidedown16() {
+					$('#chapter16').slideDown("slow");
+				}
+			</script>
+		<form>
+			<input type="button" value="open chapter" onclick="slidedown16()" />
+			<input type="button" value="close chapter" onclick="slideup16()" />
+		</form>
+		</div><!-- /button -->
+</div><!-- /ch16 -->
+
+<!-- ch17 -->
+<div class="chapterBlocks">
+<h2>Ch17: Bookmarklets</h2>
+	<!--articleParagraph -->	
+	<p class="articleParagraph">
+		Bookmarklets are bookmarks that contain a call to the browser's JavaScript interpreter, 
+		insteand of an external URL. The JavaScript in you bookmarklets can do anything from getting
+		details about images, to giving you the definition of a word, to resizing your browser window.
+		This functionality is easy to add to make your browser a smarter, better tool. In this chapter, 
+		you'll get introduced to a variety of useful bookmarklets.
+	</p>
+	<!--/articleParagraph -->	
+		<!-- content list -->
+		<div id="chapter17" class="content">
+		<ul>
+			<li><a href="html/ch17/index.html">Highlighting New Elements</a></li>	
+		</ul>
+		</div><!-- /content list -->
+		<!-- button -->
+		<div class="onOffButton">		
+			<script type="text/javascript">
+				function slideup17() {
+					$('#chapter17').slideUp("slow");
+				}
+				function slidedown17() {
+					$('#chapter17').slideDown("slow");
+				}
+			</script>
+		<form>
+			<input type="button" value="open chapter" onclick="slidedown17()" />
+			<input type="button" value="close chapter" onclick="slideup17()" />
+		</form>
+		</div><!-- /button -->
+</div><!-- /ch17 -->
+</body>
+</html>

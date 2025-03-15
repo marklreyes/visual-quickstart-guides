@@ -1,0 +1,35 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Ch6: Determining Browser Type with $.browser | jQuery Visual Start Guide</title>
+<!-- <script type="text/javascript" src="../js/jquery-1.4.2.js"></script> -->
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"> </script>
+<script type="text/javascript">
+	$(document).ready(function() {
+		$.each($.browser, function(i, val) {
+			$("<div>" + i + " is " + val + "</div>").appendTo(document.body);
+		});
+	});
+</script>
+<style type="text/css">
+</style>
+</head>
+<body>
+<h1>Determining browser information</h1>
+</body>
+</html>
+<!-- 
+$.browser, useful variable that comes with the utility functions
+this variable contains an object that has these properties
+	safari
+	opera
+	msie
+	mozilla
+	version
+	
+	the first four properties hold a value of true if your code is executing in the corresponding browser, and false otherwise
+	version property holds the browser's version number as a text string
+	
+EX: displays the name and version number of the browser in which the code is running
+-->

@@ -1,0 +1,52 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Ch9: Getting Data from Dialog Widgets | jQuery Visual Start Guide</title>
+
+<!-- CSS User Interface (UI) stylesheet-->
+<link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css" rel="stylesheet" type="text/css"/>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
+
+<script type="text/javascript">
+  $(document).ready(function(){
+	$("#dialog").dialog({
+		buttons: {"Ok": function() { $(this).dialog("close"); } }, 
+	   		beforeclose: function(event, ui) { 
+	   			$("#results").text("You entered " + 
+	   			$("#text").val()) 
+	   		}
+		});
+  });
+</script>
+
+<style type="text/css">
+</style>
+</head>
+<body style="font-size:65%;">
+  <h1>Getting data from a dialog</h1>
+	<div id="dialog" title="Dialog Title">Enter some text and close me.
+		<input type="text" id="text"></input>
+	</div>
+<div id="results"></div>
+</body>
+</html>
+<!-- 
+Dialog widgets are just what you expect them to be: dailog boxes. 
+Using jQuery dialog boxes, you can create simple or elaborate dialog boxes with ease.
+
+You can also add controls to dialog widgets and rad the data the user entered in them.
+
+This example displays whatever text that a user enters in it.
+
+jQuery widgets:
+	Accordion
+	datepicker
+	dialog
+	progressbar
+	slider
+	tabs
+
+check for new source code from, http://docs.jquery.com/UI/Dialog
+-->

@@ -1,0 +1,40 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Ch2: Checking the Type of Matched Elements | jQuery Visual Start Guide</title>
+<!-- <script type="text/javascript" src="../js/jquery-1.4.2.js"></script> -->
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"> </script>
+<script type="text/javascript">
+function checkType(){
+	if($('#p1').is('p')){
+		alert("The element with ID p1 is a <p> element");
+	}
+}
+</script>
+<style type="text/css">
+</style>
+</head>
+<body>
+<h1>Checking the types of matches</h1>
+<div>
+	<p id="p1">This is paragraph 1.</p>
+	<p id="p2">This is paragraph 2.</p>
+	<p id="p3">This is paragraph 3.</p>
+	<p id="p4">This is paragraph 4.</p>
+</div>
+<form>
+	<input type="button" value="Select" onclick="checkType()" />
+</form>
+</body>
+</html>
+<!-- 
+jQuery lets you check the type of matched elements with:
+	is()function
+	
+
+to use the is function, enter code like this:
+	$('#p1').is('p'))
+
+this selector returns true if the element with ID p1 is a p element	
+-->

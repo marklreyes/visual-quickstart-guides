@@ -1,0 +1,61 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Ch4: Getting the Event Type | jQuery Visual Start Guide</title>
+<!-- <script type="text/javascript" src="../js/jquery-1.4.2.js"></script> -->
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"> </script>
+<script type="text/javascript">
+	$(function(){
+		$('#target').bind('click', clicker);
+	});
+	
+	function clicker(event) {
+		$('#p1').text('Event type: ' + event.type);
+	}
+</script>
+<style type="text/css">
+</style>
+</head>
+<body>
+<h1>Getting event type</h1>
+<h1>Click the flower...</h1>
+<img id="target" src="../../images/image1.jpg" />
+<p id="p1"></p>
+</body>
+</html>
+<!-- 
+Connect a single event handler to many different types of events.
+
+EX: You may want to centralize your event handling for clicks and double-clicks in one function
+
+Use the event object's type property.
+That property stores the name of the even in human language.
+
+Possibilies are:
+	blur
+	focus
+	load
+	resize
+	scroll
+	unload
+	before-unload
+	click
+	dblclick
+	mousedown
+	mouseup
+	mousemove
+	mouseover
+	mouseout
+	mouseenter
+	mouseleave
+	change
+	select
+	submit
+	keydown
+	keypress
+	keyup
+	error
+
+
+-->

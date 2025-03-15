@@ -1,0 +1,46 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Ch1: Showing and Hiding Page Elements| jQuery Visual Start Guide</title>
+<!-- <script type="text/javascript" src="../js/jquery-1.4.2.js"></script> -->
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"> </script>
+<script type="text/javascript">
+function hide(){
+	$('p:first').hide();
+}
+function show(){
+	$('p:first').show();
+}
+</script>
+<style type="text/css">
+</style>
+</head>
+<body>
+<h1>Hide and show paragraphs</h1>
+<div>
+<p>This is paragraph 1.</p>
+<p>This is paragraph 2.</p>
+<p>This is paragraph 3.</p>
+<p>This is paragraph 4.</p>
+</div>
+<form>
+  <input type="button" value="Hide paragraph" onclick="hide()" />
+  <input type="button" value="Show paragraph" onclick="show()" />
+</form>
+</body>
+</html>
+<!-- 
+hide a page element with:
+hide()
+
+show a page element with:
+show()
+
+use with a selector like this,
+$('p:first').hide();
+$('p:first').show();
+
+
+show() and hide() functions are part of the visual effects that jQuery offers
+-->

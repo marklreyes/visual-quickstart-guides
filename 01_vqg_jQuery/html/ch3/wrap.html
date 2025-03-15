@@ -1,0 +1,34 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Ch3: Wrapping Elements | jQuery Visual Start Guide</title>
+<!-- <script type="text/javascript" src="../js/jquery-1.4.2.js"></script> -->
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"> </script>
+<script type="text/javascript">
+	function wrapper(){
+		$("p").wrap("<h1></h1>");
+}
+</script>
+<style type="text/css">
+</style>
+</head>
+<body>
+<h1>Wrapping elements.</h1>
+<p>This is paragraph 1.</p>
+<p>This is paragraph 2.</p>
+<p>This is paragraph 3.</p>
+<p>This is paragraph 4.</p>
+<form>
+	<input type="button" value="Wrap paragraphs in a header" onclick="wrapper()" />
+</form>
+</body>
+</html>
+<!-- 
+use the wrap() function to wrap all the contained elements inside other elements
+useful if you want to put a wrapped set of elements into, say, a div element for easy handling
+
+have some p elements and want to wrap them in an h1 header, use the wrap function:
+	$("p").wrap("<h1></h1>");
+
+-->

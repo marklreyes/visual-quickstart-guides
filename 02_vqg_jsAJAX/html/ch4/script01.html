@@ -1,0 +1,32 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>A Simple Rollover</title>
+</head>
+<body bgcolor="#FFFFFF">
+	<a href="next.html" onmouseover="document.arrow.src='images/arrow_on.gif'" onmouseout="document.arrow.src='images/arrow_off.gif'"><img src="images/arrow_off.gif" width="147" height="82" border="0" name="arrow" alt="arrow" /></a>
+</body>
+</html>
+
+<!--
+Rollovers: you have two images
+	1 - original image: loaded and displayed along with the rest of the web page by the user
+	2 -	replacement image: when mouse is moved over the first image, browser swaps out the 
+		first image for the second, giving the illusion of movement or animation
+
+	onmouseover="document.arrow.src='images/arrow_on.gif'"
+		when the user moves the mouse over the image, the replacement image, arrow_on.gif is written to the document window
+	
+	onmouseout="document.arrow.src='images/arrow_off.gif'"
+		when the mouse moves away, arrow_off.gif is swapped back in
+
+	alt attribute included are required if you want HTML to be compliant with 
+	W3C standards, plus helps make your page accessible to disabled users 
+	(i.e. visually impaired users who use screen readers)
+
+Disadvantages to this kind of rollover
+	1 - the second image is donwloaded fromt he server at the time the user rolls over the first image, there can be perceived delay
+		before the second image replaces the first once, especially for people browsing your site with a slower connection
+	2 - using this method causes an error message in ancient browsers
+-->

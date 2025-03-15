@@ -1,0 +1,52 @@
+body {
+	font-family: sans-serif;
+	background: url('images/bkg.gif') repeat-x center top #F7F7F7;
+	margin: 0px;
+	padding: 0px;
+	width: 100%;
+}
+
+body h1 {
+	margin-left: 25px;
+}
+	
+.blueText {
+	color: #5c86b2;
+}
+
+body h2 {
+	font-size: 16px;
+}
+
+#introBlock {
+	margin: 25px;
+	padding: 10px;
+	background-color: #ffffff;
+	width: 450px;
+	border: 1px solid #333333;
+	border-radius: 10px;
+}
+
+	#introBlock p {font-size: 12px;}
+
+
+.chapterBlocks {
+	margin: 25px;
+	padding: 10px;
+	background-color: #cccccc;
+	width: 450px;
+	border: 1px solid #333333;
+	border-radius: 10px;
+}
+
+.articleParagraph {
+	color: #000000;
+	font-size: 12px;
+}
+
+.row{width: 960px;}
+
+a:link {color:#5c86b2;}      /* unvisited link */
+a:visited {color:#5c86b2;}  /* visited link */
+a:hover {color:#000000;}  /* mouse over link */
+a:active {color:#5c86b2;}  /* selected link */

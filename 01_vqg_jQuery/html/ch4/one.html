@@ -1,0 +1,32 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Ch4: Calling Event Handlers Only Once | jQuery Visual Start Guide</title>
+<!-- <script type="text/javascript" src="../js/jquery-1.4.2.js"></script> -->
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"> </script>
+<script type="text/javascript">
+ $(function(){
+ 	$('#target').one('click',function(event) {
+ 		alert('Hello!');
+ 	});
+ });
+</script>
+<style type="text/css">
+</style>
+</head>
+<body>
+<h1>Allowing event handlers to be called only once</h1>
+<h1>Click the flower...</h1>
+<img id="target" src="../../images/image1.jpg" />
+</body>
+</html>
+<!-- 
+use jQuery to bind an event to an event handler that you want to run only once
+useful if you have an initialization process that needs to be executed only once
+
+example: you may want to initialize an online database - a process that needs to be done only one at a time
+
+to bind events to an event handler so that the event handler is run only once, use the one() function:
+	.one('click',function(event) {...
+-->

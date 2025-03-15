@@ -1,0 +1,77 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Ch8: Handling Ajax Events Globally | jQuery Visual Start Guide</title>
+<!-- <script type="text/javascript" src="../js/jquery-1.4.2.js"></script> -->
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"> </script>
+<script type="text/javascript">
+$(document).ready(function(){
+	$("#starting").hide();
+ 	$("#sending").hide();
+ 	$("#success").hide();
+ 	$("#somplete").hide();
+ 	$("#starting").bind("ajaxStart", function(){
+   		$(this).show();
+ 	});
+ 	
+ $("#sending").bind("ajaxSend", function(){
+   $(this).show();
+ });
+ 
+ $("#success").bind("ajaxSuccess", function(){
+   $(this).show();
+ });
+ 
+ $("#complete").bind("ajaxComplete", function(){
+   $(this).show();
+ });
+ 
+$.ajax({
+  	type: "GET",
+  	url: "getter.php",
+ 	data: {data: 1},
+  	success: callback,
+  	error: err
+	});
+});
+
+function callback(data, status) {
+    $("#results").text(data);
+}
+
+function err(xhr, reason, ex) {
+    $("div").text(reason);
+}
+</script>
+<style type="text/css">
+</style>
+</head>
+<body>
+    <h1>Handling Ajax events</h1>
+    <div id="starting">Starting...</div>
+    <div id="sending">Sending...</div>
+    <div id="success">Successful...</div>
+    <div id="complete">Complete...</div>
+    Got this in response: <div id="results"></div>
+</body>
+</html>
+<!-- 
+Handle Ajax events such as a success or error 
+event locally in the $.ajax() function
+
+jQuery also provides functions to connect a callback 
+function to any of these events globally to handle all 
+your Ajax operations (saving you the trouble of setting 
+up local event handlers for each operation).
+
+These global event handlers are:
+	AjaxStart()
+	AjaxSend()
+	AjaxSuccess()
+	AjaxError()
+	AjaxComplete()
+	AjaxStop()
+
+EX: Put global Ajax event handlers to work
+-->

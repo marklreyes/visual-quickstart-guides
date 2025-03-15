@@ -1,0 +1,51 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Ch5: Showing and Hiding Elements with Duration | jQuery Visual Start Guide</title>
+<!-- <script type="text/javascript" src="../js/jquery-1.4.2.js"></script> -->
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"> </script>
+<script type="text/javascript">
+	function showImage() {
+		$('#target').show(2000);
+	}
+	
+	function hideImage() {
+		$('#target').hide(2000, hey);
+	}
+	
+	function hey() {
+		$('#p1').text("Hey, where did it go?");
+}
+</script>
+<style type="text/css">
+</style>
+</head>
+<body>
+<h1>Showing and Hiding Elements with Duration</h1>
+<img id="target" src="../../images/image1.jpg" />
+<form>
+	<input type="button" value="Show" onclick="showImage()" />
+	<input type="button" value="Hide" onclick="hideImage()" />
+</form>
+<br />
+<p id="p1"></p>
+</body>
+</html>
+<!-- 
+jQuery gives you more control over showing and hiding page elements.
+You can set the amount of time taken for a page element to appear or disappear, and you can call a function when the transition is complete.
+
+EX: Use the show() function if you want to set a duration and a callback function,
+		show(duration, callback)
+	
+	duration: amount of time taken to show the image (in milliseconds)
+	callback: callback function jQuery will call when the transition is complete
+	
+	corresponding version of hide() looks like this:
+		hide(duration, callback)
+	
+	1) Show and hide an image
+	2) Taking 2 seconds for each transition
+	3) Have jQuery call a callback function to display the text, "Hey, where did it go?" when the image is hidden
+-->

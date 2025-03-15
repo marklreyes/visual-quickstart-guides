@@ -1,0 +1,38 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Ch1: Selecting One of a Set of Elements | jQuery Visual Start Guide</title>
+<!-- <script type="text/javascript" src="../js/jquery-1.4.2.js"></script> -->
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"> </script>
+<script type="text/javascript">
+	function selectElement(){
+ 		$('p')[0].innerHTML="<i>Hello there!</i>";
+		}
+</script>
+<style></style>
+</head>
+<body>
+<h1>Select one of a set of elements</h1>
+<div>
+<p>This is paragraph 1.</p>
+<p>This is paragraph 2.</p>
+<p>This is paragraph 3.</p>
+<p>This is paragraph 4.</p>
+</div>
+<form>
+  <input type="button" value="Select Element" onclick="selectElement()" />
+</form>
+</body>
+</html>
+<!--
+jQuery expression like:
+    $('p')
+returns a set of all <p> elements in a page
+
+to select the first set of elements, you can treat it as an array:
+	$('p')[0]
+    
+rewrite the text in the p element using the selected element's innerHTML property when the user clicks a button:
+	$('p')[0].innerHTML="<i>Hello there!</i>";
+ -->

@@ -1,0 +1,33 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Ch3: Appending Content to Elements | jQuery Visual Start Guide</title>
+<!-- <script type="text/javascript" src="../js/jquery-1.4.2.js"></script> -->
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"> </script>
+<script type="text/javascript">
+function addContent() {
+	$("p").append("<b>$1,000,000!</b>");
+}
+</script>
+<style type="text/css">
+</style>
+</head>
+<body>
+<h1>Appending content to a page</h1>
+<p>you have won </p>
+<form>
+	<input type="button" value="See how much you've won" onclick="addContent()" />
+</form>
+</body>
+</html>
+<!-- 
+jQuery lets you append content to page elements with: append() function
+
+locate your p tag element,
+	$("p")
+
+append other text to the p tag element like this:
+	$("p").append("<b>$1,000,000!</b>");
+
+-->

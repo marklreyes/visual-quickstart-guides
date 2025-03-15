@@ -1,0 +1,35 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>| jQuery Visual Start Guide</title>
+<!-- <script type="text/javascript" src="../js/jquery-1.4.2.js"></script> -->
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"> </script>
+<script type="text/javascript">
+function resize(){
+	$("img").width(486);
+	$("img").height(365);
+}
+</script>
+<style type="text/css">
+</style>
+</head>
+<body>
+<h1>Setting image width and height</h1>
+<img src="../../images/image1.jpg" alt="This is an image of flowers."/>
+<img src="../../images/image2.jpg" alt="This is also an image of flowers."/>
+<form>
+	<input type="button" value="Resize" onclick="resize()" />
+</form>
+</body>
+</html>
+<!-- 
+jQuery lets you set the width and height of elements in a page with the width() and height() functions
+apply them to wrapped set of elements and pass the new width or height in pixels
+
+to set new width use,
+	width(newvalue)
+
+to set new height use,
+	height(newvalue)
+-->

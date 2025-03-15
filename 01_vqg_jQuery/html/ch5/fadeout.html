@@ -1,0 +1,33 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Ch5: Fading Elements Out | jQuery Visual Start Guide</title>
+<!-- <script type="text/javascript" src="../js/jquery-1.4.2.js"></script> -->
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"> </script>
+<script type="text/javascript">
+	function fade() {
+		$('#target').fadeOut(2000);
+	}
+</script>
+<style type="text/css">
+</style>
+</head>
+<body>
+<h1>Fading an image out</h1>
+<img id="target" src="../../images/image1.jpg" />
+<form>
+	<input type="button" value="Fade Out" onclick="fade()" />
+</form>
+</body>
+</html>
+<!-- 
+Make page elements fade out as the user watches
+use the fadeOut() function
+
+fadeOut(duration, callback)
+	duration is the time in millisaeconds that the fading operation should take
+	callback is a callback function that jQuery will call when the operation is complete
+
+EX: make an image fade out when the user clicks a button
+-->

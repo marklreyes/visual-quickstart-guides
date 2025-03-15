@@ -1,0 +1,52 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Ch8: Handling Ajax Errors | jQuery Visual Start Guide</title>
+<!-- <script type="text/javascript" src="../js/jquery-1.4.2.js"></script> -->
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"> </script>
+<script type="text/javascript">
+      $(document).ready(function(){
+		$.ajax({
+  			type: "GET",
+  			url: "getterr.php",
+ 			data: {data: 1},
+  			success: callback,
+  			error: err
+		});
+     });
+
+function callback(data, status) {
+    $("div").text(data);
+}
+
+function err(xhr, reason, ex) {
+    $("div").text(reason);
+}
+</script>
+<style type="text/css">
+</style>
+</head>
+<body>
+    <h1>Handling Ajax errors</h1>
+    Got this in response: <div></div>
+</body>
+</html>
+<!-- 
+If the resource you are trying to download isn't there 
+or there may be no connection to the internet...
+
+The $.ajax() function lets you handle errors with a 
+callback function that's called when an error occurs.
+
+Connect the error callback function to the $.ajax() 
+function using the error option and put error handling 
+code into the callback function.
+
+The error callback function is passed three items:
+	1 - the XMLHttpRequest object
+	2 - a string that contains the error description
+	3 - exception object
+		
+EX: Try to access a resource on the Web that isn't actually there and handle the error with code in an error handler.
+-->

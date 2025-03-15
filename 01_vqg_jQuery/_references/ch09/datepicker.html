@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Using a datepicker</title>
+  <link type="text/css" href="http://jqueryui.com/latest/themes/base/ui.all.css" rel="stylesheet" />
+  <script type="text/javascript" src="http://jqueryui.com/latest/jquery-1.3.2.js"></script>
+  <script type="text/javascript" src="http://jqueryui.com/latest/ui/ui.core.js"></script>
+  <script type="text/javascript" src="http://jqueryui.com/latest/ui/ui.datepicker.js">
+</script>
+  <script type="text/javascript">
+  $(document).ready(function(){
+$("#datepicker").datepicker({
+   onSelect: function(dateText, inst) {
+$("#result").text("You selected " + dateText)}
+});
+  });
+  </script>
+</head>
+<body style="font-size:65%;">
+  <h1>Using a datepicker</h1>
+<div type="text" id="datepicker"></div>
+<div style="font-size:100%;" id="result"></div>
+
+</body>
+</html>

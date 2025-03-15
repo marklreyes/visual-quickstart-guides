@@ -1,0 +1,56 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Ch6: Filtering an Array | jQuery Visual Start Guide</title>
+<!-- <script type="text/javascript" src="../js/jquery-1.4.2.js"></script> -->
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"> </script>
+<script type="text/javascript">
+  $(document).ready(function()
+  {
+
+    var array = [1, 2, 3, 4, 5, 6, 7, 8];
+    $("#div1").text("Original array: " + array.join(", "));
+
+    array = $.grep(array, function(n, i)
+    {
+      return (i > 4);
+    });
+    $("#div2").text("Filtered i > 4: " + array.join(", "));
+
+    array = $.grep(array, function (n) 
+    {
+      return n != 7;
+    });
+    $("#div3").text("Filtered n != 7: " + array.join(", "));
+  });
+</script>
+<style type="text/css">
+</style>
+</head>
+<body>
+	<h1>Filtering arrays</h1>
+	   <div id="div1"></div>
+	   <div id="div2"></div>
+	   <div id="div3"></div>
+</body>
+</html>
+<!-- 
+one of the most powerful functions is $.grep()
+
+$.grep() function lets you create new arrays by filtering existing ones
+
+	EX: create a new array of all elements in an existing array past index 4
+	
+			array = $.grep(array, function(n, i)
+			{
+				return (i > 4);
+			});
+	
+	EX: how you filter out all elements that contain 7
+	
+			array = $.grep(array, function (n)
+			{
+				return n != 7;
+			}
+-->

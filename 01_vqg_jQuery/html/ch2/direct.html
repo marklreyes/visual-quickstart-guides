@@ -1,0 +1,41 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Ch2: Selecting Direct Descendants | jQuery Visual Start Guide</title>
+<!-- <script type="text/javascript" src="../js/jquery-1.4.2.js"></script> -->
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"> </script>
+<script type="text/javascript">
+function setStyle(){
+	$('div > p').css("font-style", "italic");
+	}
+</script>
+<style type="text/css">
+</style>
+</head>
+<body>
+<h1>Selecting direct descendents</h1>
+<div> 
+  <span><p>This is paragraph 1.</p></span>
+  		<p>This is paragraph 2.</p>
+  		<p>This is paragraph 3.</p>
+  		<p>This is paragraph 4.</p>
+</div>
+<p>This is paragraph 5.</p>
+<form>
+  <input type="button" value="Select" onclick="setStyle()" />
+</form>
+</body>
+</html>
+<!-- 
+to select all p elements in a page that have div elements as ancestors, use:
+	$('div p')
+
+to select only the first type of p elements, those with direct parent div elements, use:
+	$('div > p')
+
+it selects all p elements that are descended from div elements
+
+italicize the matching p elements, use:
+	.css("font-style", "italic");
+-->

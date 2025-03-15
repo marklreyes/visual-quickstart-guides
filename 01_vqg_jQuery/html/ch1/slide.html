@@ -1,0 +1,38 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Ch1: Creating Visual Effects | jQuery Visual Start Guide</title>
+<!-- <script type="text/javascript" src="../js/jquery-1.4.2.js"></script> -->
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"> </script>
+<script type="text/javascript">
+function slideup() {
+	$('#first').slideUp("slow");
+}
+function slidedown() {
+	$('#first').slideDown("slow");
+}
+</script>
+<style></style>
+</head>
+<body>
+<h1>Slide paragraphs up and down</h1>
+<div>
+<p id="first">This is paragraph 1.</p>
+<p>This is paragraph 2.</p>
+<p>This is paragraph 3.</p>
+<p>This is paragraph 4.</p>
+</div>
+<form>
+<input type="button" value="Slide up" onclick="slideup()" />
+<input type="button" value="Slide down" onclick="slidedown()" />
+</form>
+</body>
+</html>
+<!-- 
+to slide elements up with the id of 'first', execute code:
+	$('#first').slideUp("slow");
+
+to slide elements down with the id of 'first', execute code:
+	$('#first').slideDown("slow");
+-->

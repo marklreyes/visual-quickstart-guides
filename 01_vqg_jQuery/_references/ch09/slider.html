@@ -1,0 +1,26 @@
+<html>
+<head>
+  <title>Using sliders</title>
+  <link type="text/css" href="http://jqueryui.com/latest/themes/base/ui.all.css" rel="stylesheet" />
+  <script type="text/javascript" src="http://jqueryui.com/latest/jquery-1.3.2.js"></script>
+  <script type="text/javascript" src="http://jqueryui.com/latest/ui/ui.core.js"></script>
+  <script type="text/javascript" src="http://jqueryui.com/latest/ui/ui.slider.js"></script>
+  <style type="text/css">
+    #slider { margin: 10px; }
+  </style>
+  <script type="text/javascript">
+  $(document).ready(function(){
+    $("#slider").slider({min: 0, max: 100,
+slide: function(event, ui) {
+$("#results").text("Slider is at " +$("#slider").slider('value'))}
+ });
+  });
+  </script>
+</head>
+<body style="font-size:65%;">
+  <h1>Using sliders</h1>
+<div id="slider"></div>
+<div id="results"></div>
+
+</body>
+</html>

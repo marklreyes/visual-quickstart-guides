@@ -1,0 +1,41 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Ch7: Using $.post() to Send Data to the Server | jQuery Visual Start Guide</title>
+<!-- <script type="text/javascript" src="../js/jquery-1.4.2.js"></script> -->
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"> </script>
+<script type="text/javascript">
+      $(document).ready(function(){
+		$.post("poster.php", {data: 1},
+ 		function(data){
+    		$("div").text(data);
+  			}); 
+     });
+</script>
+<style type="text/css">
+</style>
+</head>
+<body>
+    <h1>Using the jQuery $.post() function</h1>
+    	Got this from the server: <div></div>
+</body>
+</html>
+<!-- 
+The load() function is handy for loading data from Ajax operations into a wrapped element set.
+It uses the GET method to communicate with the server.
+Unless you pass data to the server, in which case it uses POST.
+
+	You may want more control over when the GET or POST method is used, 
+	and you may want to get your hands on th downloaded data without 
+	necessarily loading it inot a wrapped element set automatically.
+	
+	jQuery provides the $.get() and $.post() functions
+	
+	These functions let you communicate with the server using the GET 
+	and POST methods, and they let you access the data without automatically 
+	loading it into a wrapped element set.
+	
+EX: put $.post() to work, sending data to the server displaying the result.
+	The arguments for $.post() are the same as for load().
+-->

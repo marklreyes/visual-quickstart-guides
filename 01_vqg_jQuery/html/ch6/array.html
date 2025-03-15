@@ -1,0 +1,37 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Ch6: Checking Whether Data Is an Array | jQuery Visual Start Guide</title>
+<!-- <script type="text/javascript" src="../js/jquery-1.4.2.js"></script> -->
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"> </script>
+<script type="text/javascript">
+$(document).ready(function() {
+	var array = [1, 2, 3, 4, 5, 6, 7, 8];
+	
+	if($.isArray(array)){
+		$("div").text("The data is an array");
+	}
+	
+	else {
+		$("div").text("The data is not an array");
+	}
+});
+</script>
+<style type="text/css">
+</style>
+</head>
+<body>
+	<h1>Testing for arrays</h1>
+		<div></div>
+</body>
+</html>
+<!-- 
+jQuery has a function to detmine whether an object is a true JavaScript array
+
+$.isArray() function returns a value of true if the object you pass it is an array, and false otherwise.
+
+EX: Creating an array and seeing whether $.isArray() can correctly determine that it is indeed an array.
+
+You can also use the jQuery utility function #.isFunction() to check whether an object is a function.
+-->

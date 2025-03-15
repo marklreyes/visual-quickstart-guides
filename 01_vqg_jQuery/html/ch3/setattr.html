@@ -1,0 +1,37 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Ch3: Setting Attribute Values | jQuery Visual Start Guide</title>
+<!-- <script type="text/javascript" src="../js/jquery-1.4.2.js"></script> -->
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"> </script>
+<script type="text/javascript">
+function setAlt(){
+	$("img:first").attr("alt", "These are flowers.");
+}
+</script>
+<style type="text/css">
+</style>
+</head>
+<body>
+<h1>Setting an alt attribute</h1>
+<img src="../../images/image1.jpg" />
+<img src="../../images/image2.jpg" />
+<form>
+	<input type="button" value="Set alt attribute" onclick="setAlt()" />
+</form>
+</body>
+</html>
+<!--
+jQuery lets you set attribute values with the attr() function as well as read them
+
+to set an attribute value, you pass the attribute you want to add and its new value
+
+add an alt attribute, "These are flowers." to the first img element in a page:
+	1 - zero in on the first img element
+			$("img:first")
+
+	2 - then set the alt attribute value using the attr() functions:
+			$("img:first").attr("alt", "These are flowers.");
+
+-->

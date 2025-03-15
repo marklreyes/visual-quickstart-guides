@@ -1,0 +1,53 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Ch6: Checking Browser Support for Specific Features | jQuery Visual Start Guide</title>
+<!-- <script type="text/javascript" src="../js/jquery-1.4.2.js"></script> -->
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"> </script>
+<script type="text/javascript">
+	$(document).ready(function() {
+		if($.support.boxModel) {
+			$("p").html("I support the W3C box model.");
+		}
+		else {
+			$('p').html("I do not support the W3C box model.");
+		}
+	});
+</script>
+<style type="text/css">
+</style>
+</head>
+<body>
+<h1>Checking browser support</h1>
+<p>
+</p>
+</body>
+</html>
+<!-- 
+The $.support() utility function returns information about supported features in the user's browser.
+
+You can use it like this: $.support.XXX, where XXX is a flag with the following possible values:
+
+		boxModel: is truew if the browser supports the W3C CSS box model
+		
+		cssFloat: is true if style.cssFloat is used to access the current CSS float value
+		
+		hrefNormalized: is truew if the browser doesn't alter the results of getAttribute("href")
+		
+		htmlSerialize: is true if the browser properly serializes links when innerHTML is used
+		
+		leadingWhiteSpace: is true if the browser preserves leading white space with innerHTML
+		
+		noCloneEvents: is true if the browser does not clone event handlers when elements are cloned
+		
+		objectAll: is true if running getElementsByTagName() on an element returns all descendant elements
+		
+		opacity: is true if a browser can interpret the opacity style property
+		
+		scriptEval: is true if appendChild/createTextNode executes scripts
+		
+		style: is true if getAttribute("style") returns the correct inline style
+		
+		tbody: is true if the browser allows table elements without tbody elements
+-->

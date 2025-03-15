@@ -1,0 +1,46 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Ch9: Creating a Slider Widget | jQuery Visual Start Guide</title>
+
+<!-- CSS User Interface (UI) stylesheet-->
+<link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css" rel="stylesheet" type="text/css"/>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
+
+<script type="text/javascript">
+/* add a call to display the slider widget and 
+display the new value when the user slides the control */
+
+  $(document).ready(function(){
+    $("#slider").slider({min: 0, max: 100,
+		slide: function(event, ui) {
+			$("#results").text("Slider is at " +$("#slider").slider('value'))}
+ 	});
+  });
+</script>
+<style type="text/css">
+</style>
+</head>
+<body style="font-size:65%;">
+  <h1>Using sliders</h1>
+<div id="slider"></div>
+<div id="results"></div>
+
+</body>
+</html>
+<!-- 
+Sliders are those horizontal sliding controls that 
+look like they come from a stereo. jQuery supports them as well.
+
+jQuery widgets:
+	Accordion
+	datepicker
+	dialog
+	progressbar
+	slider
+	tabs
+	
+check for new source code from, http://docs.jquery.com/UI/Slider
+-->

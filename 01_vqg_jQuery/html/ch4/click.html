@@ -1,0 +1,57 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Ch:4 Binding Event Handlers Using Shortcuts| jQuery Visual Start Guide</title>
+<!-- <script type="text/javascript" src="../js/jquery-1.4.2.js"></script> -->
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"> </script>
+<script type="text/javascript">
+$(function(){
+	$('#target').click(function(event){
+		alert('Hello!');
+		});
+	});
+</script>
+<style type="text/css">
+</style>
+</head>
+<body>
+<h1>Binding event handlers using shortcuts</h1>
+<h1>Click the flower...</h1>
+<img id="target" src="../../images/image1.jpg">
+</body>
+</html>
+<!-- 
+you don't need to bind an event handler to a page event using the bind() function like this:
+	.bind('click',function(event) {...
+	
+use a shortcut, use the event name as the binding function itself. Here's how to bind the click event:
+	.click(function(event) {...
+	
+possible shortcut functions:
+	blur()
+	focus()
+	load()
+	resize()
+	scroll()
+	unload()
+	beforeunload()
+	click()
+	dblclick()
+	mousedown()
+	mouseup()
+	mousemove()
+	mouseover()
+	mouseout()
+	mouseenter()
+	mouseleave()
+	change()
+	select()
+	submit()
+	keydown()
+	keypress()
+	keyup()
+	error()
+
+click.html binds the click event of an image to a handler function using the click() function
+-->

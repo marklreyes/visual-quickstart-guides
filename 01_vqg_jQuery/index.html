@@ -1,0 +1,427 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+
+<!--*****************************************************************************************************************
+ *	jQuery Visual QuickStart Guide
+ *	Author:	 Steven Holzner
+ *	Publisher:	 Peachpit Press, 2009
+ *	Report Errors:	 errata@peachpit.com
+ *  
+ *	Edited:	 Mark Reyes [ Mark (dot) Reyes (at) am (dot) sony (dot) com ]
+ *	Date:	02.25.11
+ *	
+ *	Requirements:
+ *		1 - Knowledge of HTML
+ *		2 - Some knowledge of JavaScript
+ *		3 - Web Browser
+ *	
+ *	Nearly all the examples can be run from your hard disk, simply by opening them in a browser. 
+ *	You should be fairly familiar with basic JavaScript. 
+ *
+ *	Some Ajax examples make use of PHP on the server, and those examples 
+ *	need to be placed on a Web server that supports PHP online scripting language.
+ *
+ *	Original source code can be found in '_references' folder if starting at this page, index.html
+ *	
+*********************************************************************************************************************-->
+
+<title>jQuery Visual QuickStart Guide</title>
+<link type="text/css" href="css/format.css" rel="stylesheet"/>
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+<script type="text/javascript">	
+	function closeDefault() {
+		$('.content').slideUp("fast");
+	}	
+</script>
+</head>
+<body id="" class="" onload="closeDefault()">
+<h1><span class="blueText">jQuery</span> Visual QuickStart Guide</h1>
+
+<!-- intro -->
+<div id="introBlock" class="">
+	<p>
+		jQuery is a JavaScript library full of tools ready to be 
+		used&mdash;which means that it's prewritten JavaScript, 
+		ready for you to put work in your own Web pages. In this 
+		<a href="http://www.peachpit.com/store/product.aspx?isbn=0321647491" target="_blank">book</a>, 
+		you get a guided tour of what makes jQuery so popular.
+	</p>
+</div><!--/intro -->
+
+<!-- ch1 -->
+<div id="" class="chapterBlocks">
+<h2>Ch1: Essential jQuery</h2>
+	<!--articleParagraph -->	
+	<p class="articleParagraph">
+		jQuery is a JavaScript library that comes in a JavaScript file with the extension .js
+		You can get jQuery from the official jQuery site, <a href="http://www.jquery.com" target="_blank">www.jquery.com</a>
+	</p>
+	<!--/articleParagraph -->
+		<!-- content list -->
+		<div id="chapter1" class="content">
+			<ul>
+				<li><a href="html/ch1/id.html">Ch1: Selecting Page Elements by ID</a></li>
+				<li><a href="html/ch1/count.html">Ch1: Selecting a Set of Elements</a></li>
+				<li><a href="html/ch1/style.html">Ch1: Selecting Elements by Style</a></li>
+				<li><a href="html/ch1/ready.html">Ch1: Running Code When a Page Is Ready</a></li>
+				<li><a href="html/ch1/first.html">Ch1: Selecting the First of a Set of Elements</a></li>
+				<li><a href="html/ch1/hide.html">Ch1: Showing and Hiding Page Elements</a></li>
+				<li><a href="html/ch1/index.html">Ch1: Selecting One of a Set of Elements</a></li>
+				<li><a href="html/ch1/hierarchy.html">Ch1: Specifying Elements in a Hierarchy</a></li>
+				<li><a href="html/ch1/slide.html">Ch1: Creating Visual Effects</a></li>
+				<li><a href="html/ch1/create.html">Ch1: Creating New HTML Elements</a></li>
+			</ul>
+		</div><!-- /content list -->
+		<!-- button -->
+		<div id="" class="onOffButton">				
+			<script type="text/javascript">
+				function slideup() {
+					$('#chapter1').slideUp("slow");
+				}
+				function slidedown() {
+					$('#chapter1').slideDown("slow");
+				}
+			</script>
+		<form>
+			<input type="button" value="open chapter" onclick="slidedown()" />
+			<input type="button" value="close chapter" onclick="slideup()" />
+		</form>
+		</div><!-- /button -->
+</div><!-- /ch1 -->
+
+<!-- ch2 -->
+<div id="" class="chapterBlocks">
+<h2>Ch2: Selecting Elements the jQuery Way</h2>
+	<!--articleParagraph -->	
+	<p class="articleParagraph">
+		One of jQuery's specialties is letting you select page elements so you can work on them.
+		Using the jQuery selectors lets you select page elements so you can work on them in JavaScript,
+		not just with CSS styles.
+	</p>
+	<!--/articleParagraph -->	
+		<!-- content list -->
+		<div id="chapter2" class="content">
+		<ul>
+			<li><a href="html/ch2/direct.html">Ch2: Selecting Direct Descendants</a></li>
+			<li><a href="html/ch2/firstlast.html">Ch2: Selecting First and Last Children</a></li>
+			<li><a href="html/ch2/nth.html">Ch2: Selecting the Nth Child</a></li>
+			<li><a href="html/ch2/text.html">Ch2: Selecting Elements with Specific Text</a></li>
+			<li><a href="html/ch2/attribute.html">Ch2: Selecting Elements by Attribute</a></li>
+			<li><a href="html/ch2/attributevalue.html">Ch2: Selecting Elements by Attribute Value</a></li>
+			<li><a href="html/ch2/is.html">Ch2: Checking the Type of Matched Elements</a></li>
+			<li><a href="html/ch2/eq.html">Ch2: Selecting Elements by Position</a></li>
+			<li><a href="html/ch2/checked.html">Ch2: Examining Checked Boxes and Radio Buttons</a></li>
+			<li><a href="html/ch2/selected.html">Ch2: Examining Elements That the User Selected</a></li>
+		</ul>
+		</div><!-- /content list -->
+		<!-- button -->
+		<div id="" class="onOffButton">		
+			<script type="text/javascript">
+				function slideup2() {
+					$('#chapter2').slideUp("slow");
+				}
+				function slidedown2() {
+					$('#chapter2').slideDown("slow");
+				}
+			</script>
+		<form>
+			<input type="button" value="open chapter" onclick="slidedown2()" />
+			<input type="button" value="close chapter" onclick="slideup2()" />
+		</form>
+		</div><!-- /button -->
+</div><!-- /ch2 -->
+
+<!-- ch3 -->
+<div id="" class="chapterBlocks">
+<h2>Ch3: Working with Elements the jQuery Way</h2>
+	<!--articleParagraph -->	
+	<p class="articleParagraph">
+		Take a guided tour of jQuery's features for working with the elements and attributes in a page&mdash;
+		all designed to let you access and manipulate page elements easily.
+	</p>
+	<!--/articleParagraph -->		
+		<!-- content list -->
+		<div id="chapter3" class="content">
+		<ul>
+			<li><a href="html/ch3/each.html">Ch3: Looping Over Elements in a Wrapped Set</a></li>
+			<li><a href="html/ch3/getattr.html">Ch3: Reading Attribute Values</a></li>
+			<li><a href="html/ch3/setattr.html">Ch3: Setting Attribute Values</a></li>
+			<li><a href="html/ch3/html.html">Ch3: Rewriting Elements' HTML</a></li>
+			<li><a href="html/ch3/text.html">Ch3: Rewriting Elements' Text</a></li>
+			<li><a href="html/ch3/append.html">Ch3: Appending Content to Elements</a></li>
+			<li><a href="html/ch3/move.html">Ch3: Moving Page Elements</a></li>
+			<li><a href="html/ch3/width.html">Ch3: Setting Element Width and Height</a></li>
+			<li><a href="html/ch3/wrap.html">Ch3: Wrapping Elements</a></li>
+			<li><a href="html/ch3/insert.html">Ch3: Inserting Elements</a></li>
+			<li><a href="html/ch3/val.html">Ch3: Editing the value Attribute</a></li>
+		</ul>
+		</div><!-- /content list -->
+		<!-- button -->
+		<div id="" class="onOffButton">
+			<script type="text/javascript">
+				function slideup3() {
+					$('#chapter3').slideUp("slow");
+				}
+				function slidedown3() {
+					$('#chapter3').slideDown("slow");
+				}
+			</script>
+		<form>
+			<input type="button" value="open chapter" onclick="slidedown3()" />
+			<input type="button" value="close chapter" onclick="slideup3()" />
+		</form>
+		</div><!-- /button -->
+</div><!-- /ch3 -->
+
+<!-- ch4 -->
+<div id="" class="chapterBlocks">
+<h2>Ch4: Working with Events</h2>
+	<!--articleParagraph -->	
+	<p class="articleParagraph">
+		Events let you respond to user actions such as clicks, double-clicks, mouse movements, and keystrokes.
+		jQuery unifies event handling in multiple browsers, whereas cross-browser event handling in straight JavaScript is a nightmare.
+	</p>
+	<!--/articleParagraph -->		
+		<!-- content list -->
+		<div id="chapter4" class="content">
+		<ul>
+			<li><a href="html/ch4/bind.html">Ch4: Binding an Event Handler to an Event</a></li>
+			<li><a href="html/ch4/multiple.html">Ch4: Binding Multiple Event Handlers</a></li>
+			<li><a href="html/ch4/click.html">Ch4: Binding Event Handlers Using Shortcuts</a></li>
+			<li><a href="html/ch4/one.html">Ch4: Calling Event Handlers Only Once</a></li>
+			<li><a href="html/ch4/unbind.html">Ch4: Unbinding Event Handlers</a></li>
+			<li><a href="html/ch4/screenxy.html">Ch4: Getting Mouse Coordinates</a></li>
+			<li><a href="html/ch4/type.html">Ch4: Getting the Event Type</a></li>
+			<li><a href="html/ch4/keycode.html">Ch4: Capturing Keystrokes</a></li>
+			<li><a href="html/ch4/hover.html">Ch4: Capturing Hover Events</a></li>
+			<li><a href="html/ch4/target.html">Ch4: Getting Event Targets</a></li>
+		</ul>
+		</div><!-- /content list -->
+		<!-- button -->
+		<div id="" class="onOffButton">
+			<script type="text/javascript">
+				function slideup4() {
+					$('#chapter4').slideUp("slow");
+				}
+				function slidedown4() {
+					$('#chapter4').slideDown("slow");
+				}
+			</script>
+		<form>
+			<input type="button" value="open chapter" onclick="slidedown4()" />
+			<input type="button" value="close chapter" onclick="slideup4()" />
+		</form>
+		</div><!-- /button -->
+</div><!-- /ch4 -->
+
+<!-- ch5 -->
+<div id="" class="chapterBlocks">
+<h2>Ch5: Visual Effects and Animation</h2>
+	<!--articleParagraph -->	
+	<p class="articleParagraph">
+		jQuery supports the full range of visual effects and animation.
+		These effects can give your Web pages a very professional and dynamic appearance.
+		this chapter shows you what jQuery has to offer.
+	</p>
+	<!--/articleParagraph -->	
+		<!-- content list -->
+		<div id="chapter5" class="content">
+		<ul>
+			<li><a href="html/ch5/showhide.html">Ch5: Showing and Hiding Page Elements</a></li>
+			<li><a href="html/ch5/showhidespeed.html">Ch5: Showing and Hiding Elements with Duration</a></li>
+			<li><a href="html/ch5/toggle.html">Ch5: Toggling Element Visibility</a></li>
+			<li><a href="html/ch5/fadeout.html">Ch5: Fading Elements Out</a></li>
+			<li><a href="html/ch5/fadein.html">Ch5: Fading Elements In</a></li>
+			<li><a href="html/ch5/slideup.html">Ch5: Sliding Elements Up</a></li>
+			<li><a href="html/ch5/slidedown.html">Ch5: Sliding Elements Down</a></li>
+			<li><a href="html/ch5/slidetoggle.html">Ch5: Toggling Sliding Operations</a></li>
+			<li><a href="html/ch5/fadeto.html">Ch5: Partially Fading Elements</a></li>
+			<li><a href="html/ch5/animate.html">Ch5: Creating Custom Animation</a></li>
+		</ul>
+		</div><!-- /content list -->
+		<!-- button -->
+		<div id="" class="onOffButton">
+			<script type="text/javascript">
+				function slideup5() {
+					$('#chapter5').slideUp("slow");
+				}
+				function slidedown5() {
+					$('#chapter5').slideDown("slow");
+				}
+			</script>
+		<form>
+			<input type="button" value="open chapter" onclick="slidedown5()" />
+			<input type="button" value="close chapter" onclick="slideup5()" />
+		</form>
+		</div><!-- /button -->
+</div><!-- /ch5 -->
+
+<!-- ch6 -->
+<div id="" class="chapterBlocks">
+<h2>Ch6: The jQuery Utility Functions</h2>
+	<!--articleParagraph -->	
+	<p class="articleParagraph">
+		jQuery has a number of utility functions built in to make everyday JavaScript tasks easier.
+		These functions are named jquery.XXX() where XXX() is the name of the function. Also referred as, $.XXX()
+	</p>
+	<!--/articleParagraph -->	
+		<!-- content list -->
+		<div id="chapter6" class="content">
+		<ul>
+			<li><a href="html/ch6/each.html">Ch6: Looping over Object Members with $.each()</a></li>
+			<li><a href="html/ch6/browser.html">Ch6: Determining Browser Type with $.browser</a></li>
+			<li><a href="html/ch6/marquee.html">Ch6: Customizing HTML by Browser Type</a></li>
+			<li><a href="html/ch6/support.html">Ch6: Checking Browser Support for Specific Features</a></li>
+			<li><a href="html/ch6/makearray.html">Ch6: Creating Arrays</a></li>
+			<li><a href="html/ch6/inarray.html">Ch6: Searching an Array</a></li>
+			<li><a href="html/ch6/grep.html">Ch6: Filtering an Array</a></li>
+			<li><a href="html/ch6/unique.html">Ch6: Eliminating Duplicate Elements from Arrays</a></li>
+			<li><a href="html/ch6/array.html">Ch6: Checking Whether Data Is an Array</a></li>
+			<li><a href="html/ch6/map.html">Ch6: Mapping an Array</a></li>
+			<li><a href="html/ch6/trim.html">Ch6: Trimming Text</a></li>
+		</ul>
+		</div><!-- /content list -->
+		<!-- button -->
+		<div id="" class="onOffButton">
+			<script type="text/javascript">
+				function slideup6() {
+					$('#chapter6').slideUp("slow");
+				}
+				function slidedown6() {
+					$('#chapter6').slideDown("slow");
+				}
+			</script>
+		<form>
+			<input type="button" value="open chapter" onclick="slidedown6()" />
+			<input type="button" value="close chapter" onclick="slideup6()" />
+		</form>
+		</div><!-- /button -->
+</div><!-- /ch6 -->
+
+<!-- ch7 -->
+<div id="" class="chapterBlocks">
+<h2>Ch7: Jumping into AJAX</h2>
+	<!--articleParagraph -->	
+	<p class="articleParagraph">
+		Ajax is a tool for creating rich, interactive Web applications&mdash;and with jQuery
+		you can easily implement it in to your Web pages. With Ajax, you can communicate with
+		the server behind the scenes, with no page refresh.
+	</p>
+	<!--/articleParagraph -->	
+		<!-- content list -->
+		<div id="chapter7" class="content">
+		<ul>
+			<li><a href="html/ch7/ajax.html">Ch7: Working with Ajax the Standard Way</a></li>
+			<li><a href="html/ch7/load1.html">Ch7: Using jQuery load() to Implement Ajax</a></li>
+			<li><a href="html/ch7/load2.html">Ch7: Callbacks with the load() Function</a></li>
+			<li><a href="html/ch7/load3.html">Ch7: Passing Data to the Server</a></li>
+			<li><a href="html/ch7/load4.html">Ch7: Passing Form Data to the Server</a></li>
+			<li><a href="html/ch7/poster.html">Ch7: Using $.post() to Send Data to the Server</a></li>
+			<li><a href="html/ch7/getter.html">Ch7: Using the jQuery $.get() Function</a></li>
+			<li><a href="html/ch7/getter2.html">Ch7: Using $.get() to Send Data to the Server</a></li>
+		</ul>
+		</div><!-- /content list -->
+		<!-- button -->
+		<div id="" class="onOffButton">
+			<script type="text/javascript">
+				function slideup7() {
+					$('#chapter7').slideUp("slow");
+				}
+				function slidedown7() {
+					$('#chapter7').slideDown("slow");
+				}
+			</script>
+		<form>
+			<input type="button" value="open chapter" onclick="slidedown7()" />
+			<input type="button" value="close chapter" onclick="slideup7()" />
+		</form>
+		</div><!-- /button -->
+</div><!-- /ch7 -->
+
+<!-- ch8 -->
+<div id="" class="chapterBlocks">
+<h2>Ch8: Using the Full Power of Ajax</h2>
+	<!--articleParagraph -->	
+	<p class="articleParagraph">
+		For full fledged tasks, jQuery provides the full-fledged $.ajax() function. This function
+		gives you access to the full power of Ajax, while still staying in jQuery.
+	</p>
+	<!--/articleParagraph -->	
+		<!-- content list -->
+		<div id="chapter8" class="content">
+		<ul>
+			<li><a href="html/ch8/ajaxsuccess.html">Ch8: Using $.ajax() to Download Text</a></li>
+			<li><a href="html/ch8/ajaxpost.html">Ch8: Using $.ajax() to Post Data to the Server</a></li>
+			<li><a href="html/ch8/poster.html">Ch8: Using $.ajax() to Get Data from the Server</a></li>
+			<li><a href="html/ch8/ajaxerror.html">Ch8: Handling Ajax Errors</a></li>
+			<li><a href="html/ch8/timeout.html">Ch8: Handling Ajax Timeouts</a></li>
+			<li><a href="html/ch8/ajaxxml.html">Ch8: Handling XML</a></li>
+			<li><a href="html/ch8/globals.html">Ch8: Handling Ajax Events Globally</a></li>
+		</ul>
+		</div><!-- /content list -->
+		<!-- button -->
+		<div id="" class="onOffButton">
+			<script type="text/javascript">
+				function slideup8() {
+					$('#chapter8').slideUp("slow");
+				}
+				function slidedown8() {
+					$('#chapter8').slideDown("slow");
+				}
+			</script>
+		<form>
+			<input type="button" value="open chapter" onclick="slidedown8()" />
+			<input type="button" value="close chapter" onclick="slideup8()" />
+		</form>
+		</div><!-- /button -->
+</div><!-- /ch8 -->
+
+<!-- ch9 -->
+<div id="" class="chapterBlocks">
+<h2>Ch9: Using the jQuery Widgets</h2>
+	<!--articleParagraph -->	
+	<p class="articleParagraph">
+			A widget is a control(controls are the text boxes, list boxes, buttons, and so on in a 
+			web page) that augments what's available in standard HTML.
+	</p>
+	<!--/articleParagraph -->
+	<!--articleParagraph -->	
+	<p class="articleParagraph">
+			<em>Ch. 9 source code provided by, <a href="http://docs.jquery.com/UI/" target="_blank">jQuery Documentation</a></em>
+	</p>
+	<!--/articleParagraph -->			
+	<!-- content list -->
+		<div id="chapter9" class="content">
+		<ul>
+			<li><a href="html/ch9/accordion.html">Ch9: Creating Accordion Widgets</a></li>
+			<li><a href="html/ch9/datepicker.html">Ch9: Creating Datepicker Widgets</a></li>
+			<li><a href="html/ch9/dialog.html">Ch9: Creating Dialog Widgets</a></li>
+			<li><a href="html/ch9/dialog2.html">Ch9: Getting Data from Dialog Widgets</a></li>
+			<li><a href="html/ch9/progressbar.html">Ch9: Creating a Progressbar Widget</a></li>
+			<li><a href="html/ch9/slider.html">Ch9: Creating a Slider Widget</a></li>
+			<li><a href="html/ch9/tabs.html">Ch9: Creating a Tabs Widget</a></li>
+			<li><a href="html/ch9/tabs2.html">Ch9: Adding Tabs to a Tabs Widget</a></li>
+		</ul>
+		</div><!-- /content list -->
+		<!-- button -->
+		<div id="" class="onOffButton">
+			<script type="text/javascript">
+				function slideup9() {
+					$('#chapter9').slideUp("slow");
+				}
+				function slidedown9() {
+					$('#chapter9').slideDown("slow");
+				}
+			</script>
+		<form>
+			<input type="button" value="open chapter" onclick="slidedown9()" />
+			<input type="button" value="close chapter" onclick="slideup9()" />
+		</form>
+		</div><!-- /button -->
+</div><!-- /ch9 -->
+
+</body>
+</html>

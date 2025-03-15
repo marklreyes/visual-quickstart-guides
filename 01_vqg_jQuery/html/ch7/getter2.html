@@ -1,0 +1,36 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Ch7: Using $.get() to Send Data to the Server | jQuery Visual Start Guide</title>
+<!-- <script type="text/javascript" src="../js/jquery-1.4.2.js"></script> -->
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"> </script>
+<script type="text/javascript">
+      $(document).ready(function(){
+		$.get("getter.php", {data: 1},
+  			function(data){
+    			$("div").text(data);
+  			}); 
+     });
+</script>
+<style type="text/css">
+</style>
+</head>
+<body>
+    <h1>Using the jQuery $.get() function with data</h1>
+    Got this from the server: <div></div>
+</body>
+</html>
+<!-- 
+You can also use the $.get() function to send data to the server.
+
+	TIP: The data you send to the server using the GET method is appended to 
+		 the actual URL sent to ths erver, something like this: http://www.server.com/pagename?data=1
+		 That means that, unlike with the POST method (which passes data in HTTP headers), 
+		 your data will be visible to others. For more security when sending 
+		 data to the server, use the POST method instead.
+
+		 The arguments for the $.get() function are the same as for the load() function
+
+EX: Use the $.get() function to send data to the server and get back a response, which the page then displays.
+-->

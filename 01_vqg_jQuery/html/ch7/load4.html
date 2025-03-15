@@ -1,0 +1,38 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Ch7: Passing Form Data to the Server | jQuery Visual Start Guide</title>
+<!-- <script type="text/javascript" src="../js/jquery-1.4.2.js"></script> -->
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"> </script>
+<script type="text/javascript">
+	function checker()
+	{
+	  $("div").load("poster.php", $("#targetForm").serializeArray());
+	}
+</script>
+<style type="text/css">
+</style>
+</head>
+<body>
+<h1>Using the jQuery serializeArray() function</h1>
+    <form id="targetForm">
+    Enter a 1 or 2: 
+    	<input type="text" name="data" id="data"></input>
+   		<input type = "button" value="Check data" onclick="checker()"</input>
+    </form>
+    <br />
+    Got this from the server: <div></div>
+</body>
+</html>
+<!-- 
+serializeArray() function, is a special function that makes it easy to pass the data from a form to the server using the load() function
+
+This function takes no parameters, creates an object whose properties correspond to the names of the controls in a form, and whose property values are the values currently in the form controls.
+
+The serializeArray() function makes it easy to send a whole form's worth of data to the server.
+
+EX: Put $.post() to work, sending data to the server and displaying the result. 
+	The arguments for $.post() are the same as for load()
+	Let the user enter a 1 or a 2 into a text field and then send that data to code on the server, which will return a matching message.
+-->

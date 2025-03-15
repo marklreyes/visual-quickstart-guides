@@ -1,0 +1,40 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Ch7: Using jQuery load() to Implement Ajax | jQuery Visual Start Guide</title>
+<!-- <script type="text/javascript" src="../js/jquery-1.4.2.js"></script> -->
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"> </script>
+<script type="text/javascript">
+  $(document).ready(function(){
+      $("div").load("message.txt");
+  });
+</script>
+<style type="text/css">
+</style>
+</head>
+<body>
+	<h1>Using the jQuery load() function</h1>
+		Got this from the server: <div></div>
+</body>
+</html>
+<!-- 
+load() function: display downloaded data in a wrapped set of elements (can only be a single element, such as a div element) directly
+
+The load() function works like this:
+
+	load(url, parameters, callback)
+		url: is the URL of the resource you're fetching on the server
+		parameter: JavaScript object whose properties hold values you want to send to the server
+		callback: callback function that jQuery will call when the Ajax operation is complete
+		
+EX: Use the load() function to download the file message.txt from the server
+	behind the scenes when the page loads and display the contents of the file ("Hello") in a div element
+	
+		URL here will be message.txt
+		to get the example working, place message.txt in the same directory on the servers as this example, load1.html
+		URL can be of the form http://www.domain/resource as well
+		
+		The URL you access must be in the same domain as the page itself, or the browser will display a warning dialog box.
+		To avoid this warning, you can use online code in the same directory as the page to access resources elsewhere on the internet.
+-->

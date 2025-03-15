@@ -1,0 +1,40 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Ch4: Binding an Event Handler to an Event | jQuery Visual Start Guide</title>
+<!-- <script type="text/javascript" src="../js/jquery-1.4.2.js"></script> -->
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"> </script>
+<script type="text/javascript">
+	$(function(){
+		$('#target').bind('click',function(event){
+			alert('Hello!');
+			});
+	});
+</script>
+<style type="text/css">
+</style>
+</head>
+<body>
+<h1>Binding event handlers to events</h1>
+<h1>Click the flower...</h1>
+<img src="../../images/image1.jpg" id="target" />
+</body>
+</html>
+<!-- 
+event handling in jQuery begins by connecting an event, such as a mouseclick, to an event handler.
+		event occurs > event handler is called > code in the event handler is executed
+
+bind a page element's event to an event handler using the bind() function.
+example, if a page contains an image and you want to bind one of the image's events to an event handler use,
+		$("img").bind(event, data, handler)
+		
+		event, is a string holding the type of event
+		possible values: blur, focus, load, resize, scroll, unload, beforeunload, click, dblclick, mousedown, mouseup, mousemove, mouseover, mouseout, mouseenter, mouseleave, change, select, submit, keydown, keypress, keyup, error
+		
+		data, parameter holds optional data you want passed to the event handler as the data property of the event object (you can delete this parameter)
+		
+		handler, is the event handler function
+		
+this example shows how to bind the click event of an image to an event handler that displays an alert box
+-->

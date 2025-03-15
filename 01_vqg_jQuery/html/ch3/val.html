@@ -1,0 +1,37 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Ch3: Editing the value Attribute | jQuery Visual Start Guide</title>
+<!-- <script type="text/javascript" src="../js/jquery-1.4.2.js"></script> -->
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"> </script>
+<script type="text/javascript">
+	function inserter(){
+		$("#target").val("This is new text.")
+	}
+</script>
+<style type="text/css">
+</style>
+</head>
+<body>
+<h1>Editing the value attribute</h1>
+<br />
+<form>
+	<input type="text" id="target" />
+	<input type="button" value="Insert new text" onclick="inserter()" />
+</form>
+</body>
+</html>
+<!-- 
+use the val() function to work with the value attribute of form elements such as buttons and text fields.
+value attribute holds the data corresponding to the control (i.e. the text in a text field or the caption of a button)
+
+when you call val() without any arguments, it returns the current data in the corresponding element's value attribute.
+
+passing data to the val() function sets the value attribute of the corresponding element to that data.
+
+example, set the value attribute of an element with the ID "target" to "Hello there." use:
+	$("#target").val("Hello there.");
+
+this example sets the text in a text field at the click of a button
+-->

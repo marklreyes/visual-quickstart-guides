@@ -1,0 +1,38 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Ch5: Partially Fading Elements | jQuery Visual Start Guide</title>
+<!-- <script type="text/javascript" src="../js/jquery-1.4.2.js"></script> -->
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"> </script>
+<script type="text/javascript">
+	function fade() {
+		$('#target').fadeTo(2000, 0.333);
+	}
+</script>
+<style type="text/css">
+</style>
+</head>
+<body>
+<h1>Partially fading an image</h1>
+<img id="target" src="../../images/image1.jpg" />
+	<form>
+		<input type="button" value="Fade" onclick="fade()" />
+	</form>
+</body>
+</html>
+<!-- 
+you can use the fadeOut() function to fade an element out and the fadeIn() function to fade an element into view
+you can also fade an element only partially, leaving it still partially visible, although faded
+
+use, fadeTo() function
+	fadeTo(duration, opacity, callback)
+	
+	duration is the time in milliseconds that the slide operation should take
+	opacity is the final opacity of the element (0 to 1)
+	callback is a callback function that jQuery will call when the operation is complete
+	
+	all parameters are optional
+
+EX: Fade an image to 0.333 opacity, so it will be mostly gone but still visible
+-->

@@ -1,0 +1,48 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>| jQuery Visual Start Guide</title>
+<!-- <script type="text/javascript" src="../js/jquery-1.4.2.js"></script> -->
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"> </script>
+<script type="text/javascript">
+	$(function(){
+		$('#target')
+		.bind('click',function(event){
+			alert('Hello!');
+		})
+		.bind('click',function(event){
+			alert('Hello again!');
+		})
+		.bind('click',function(event){
+			alert('Hello yet again!');
+		});			
+	});
+</script>
+<style type="text/css">
+</style>
+</head>
+<body>
+<h1>Binding event handlers to events</h1>
+<h1>Click the flower...</h1>
+<img id="target" src="../../images/image1.jpg" />
+</body>
+</html>
+<!-- 
+jQuery allows you to bind multiple event handlers to events
+
+bind 3 different event handler functions to a page element's click event like this, where you call the bind function 3 different times:
+	$('#target')
+		.bind('click',function(event){
+			alert('Hello!');
+		})
+		.bind('click',function(event){
+			alert('Hello again!');
+		})
+		.bind('click',function(event){
+			alert('Hello yet again!');
+		});
+		
+when the click event occurs, the first event handler will be called, followed by the second, followed by the third.
+
+-->
